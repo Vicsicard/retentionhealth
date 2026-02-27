@@ -8,14 +8,13 @@ export default function Header() {
 
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center">
-            <img 
-              src="/retention logo 1.png" 
-              alt="Retention Health" 
-              className="h-14 sm:h-16"
-            />
+            <span className="text-2xl font-semibold tracking-tight">
+              <span className="text-slate-900">Retention</span>
+              <span className="text-blue-600">Health</span>
+            </span>
           </Link>
           
           {/* Desktop Navigation */}
