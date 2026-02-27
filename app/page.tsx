@@ -4,17 +4,17 @@ export default function Home() {
   return (
     <div className="bg-white">
       {/* HERO */}
-      <section className="bg-gradient-to-b from-white to-gray-50 py-24">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="bg-gradient-to-b from-white to-gray-50 py-12 sm:py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h1 className="text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-[56px] font-extrabold text-slate-900 mb-6 sm:mb-8 leading-tight tracking-tight">
                 Reduce GLP-1 Month-1 Drop-Off.
               </h1>
-              <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+              <p className="text-lg sm:text-xl text-gray-700 mb-4 sm:mb-6 leading-relaxed">
                 Built for GLP-1 subscription programs that want to stabilize early retention.
               </p>
-              <p className="text-lg text-gray-600 mb-10">
+              <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-10">
                 Retention infrastructure for clinics managing 300+ active patients.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -33,7 +33,7 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="bg-white p-8 rounded-2xl border-2 border-gray-200 shadow-lg">
+            <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-gray-200 shadow-lg">
               <img 
                 src="/patient drop.png" 
                 alt="GLP-1 patient retention pattern showing rapid drop-off after first injection vs. stabilized retention with $215K+ ARR protected"
@@ -47,12 +47,12 @@ export default function Home() {
       <div className="h-px bg-gray-200"></div>
 
       {/* PATTERN RECOGNITION - OPERATORS KNOW THIS */}
-      <section id="problem" className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
+      <section id="problem" className="py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <h2 className="text-3xl sm:text-4xl md:text-[36px] font-bold text-slate-900 mb-6 text-center tracking-tight">
             Operators Know This Pattern
           </h2>
-          <p className="text-xl text-gray-600 mb-16 text-center max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 mb-12 sm:mb-16 text-center max-w-2xl mx-auto">
             Month one instability is operational, not clinical.
           </p>
           
@@ -62,7 +62,7 @@ export default function Home() {
                 <TrendingDown className="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 text-lg mb-2">Appetite volatility after injection</h3>
+                <h3 className="font-bold text-slate-800 text-xl mb-2">Appetite volatility after injection</h3>
                 <p className="text-gray-600">Patients unsure what to eat during suppression phases</p>
               </div>
             </div>
@@ -72,7 +72,7 @@ export default function Home() {
                 <MessageSquare className="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 text-lg mb-2">Support inbox spikes</h3>
+                <h3 className="font-bold text-slate-800 text-xl mb-2">Support inbox spikes</h3>
                 <p className="text-gray-600">Food-related questions during dose escalation</p>
               </div>
             </div>
@@ -82,7 +82,7 @@ export default function Home() {
                 <RefreshCw className="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 text-lg mb-2">Nausea uncertainty</h3>
+                <h3 className="font-bold text-slate-800 text-xl mb-2">Nausea uncertainty</h3>
                 <p className="text-gray-600">Patients struggle with protein intake during peaks</p>
               </div>
             </div>
@@ -92,13 +92,13 @@ export default function Home() {
                 <AlertTriangle className="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 text-lg mb-2">Early drop-off before month two</h3>
+                <h3 className="font-bold text-slate-800 text-xl mb-2">Early drop-off before month two</h3>
                 <p className="text-gray-600">Cancellations during the highest churn window</p>
               </div>
             </div>
           </div>
           
-          <p className="text-center text-lg text-gray-900 font-semibold mt-16 max-w-2xl mx-auto">
+          <p className="text-center text-xl text-slate-900 font-bold mt-20 max-w-2xl mx-auto">
             Avoidable churn compounds across every new cohort you enroll.
           </p>
         </div>
@@ -156,7 +156,7 @@ export default function Home() {
           </div>
           
           {/* Patient Retention Flow Diagram */}
-          <div className="mt-20 max-w-2xl mx-auto">
+          <div className="mt-12 sm:mt-16 md:mt-20 max-w-2xl mx-auto">
             <img 
               src="/patient retention.png" 
               alt="Patient retention flow: Clinic Program to Retention Health Layer to Stabilized Patient Behavior to Improved Cohort Retention"
@@ -169,17 +169,17 @@ export default function Home() {
       <div className="h-px bg-gray-200"></div>
 
       {/* PRODUCT DEFINITION */}
-      <section id="solution" className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-5xl font-bold text-gray-900 mb-8 text-center">
+      <section id="solution" className="py-12 sm:py-16 md:py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 className="text-3xl sm:text-4xl md:text-[36px] font-bold text-slate-900 mb-8 sm:mb-10 text-center tracking-tight">
             What Retention Health Actually Is
           </h2>
-          <p className="text-2xl text-gray-900 mb-16 text-center font-semibold max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl sm:text-2xl text-gray-900 mb-12 sm:mb-16 text-center font-semibold max-w-3xl mx-auto leading-relaxed">
             A white-label behavioral stabilization layer that sits inside your GLP-1 program.
           </p>
           
           {/* Product Flow Diagram */}
-          <div className="bg-gradient-to-r from-blue-50 to-teal-50 p-12 rounded-2xl border-2 border-blue-200 mb-20">
+          <div className="bg-gradient-to-r from-blue-50 to-teal-50 p-6 sm:p-8 md:p-12 rounded-2xl border-2 border-blue-200 mb-12 sm:mb-16 md:mb-20">
             <div className="grid md:grid-cols-3 gap-8 items-center max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="bg-white p-6 rounded-xl shadow-md mb-4">
@@ -206,9 +206,9 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <div className="bg-gray-50 p-10 rounded-2xl border-2 border-gray-200">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-8">It does not:</h3>
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-12 mb-12 sm:mb-16">
+            <div className="bg-gray-50 p-6 sm:p-8 md:p-10 rounded-2xl border-2 border-gray-200">
+              <h3 className="text-2xl font-bold text-slate-800 mb-8">It does not:</h3>
               <ul className="space-y-5 text-gray-700 text-lg">
                 <li className="flex items-start gap-4">
                   <XCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
@@ -225,8 +225,8 @@ export default function Home() {
               </ul>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-50 to-teal-50 p-10 rounded-2xl border-2 border-blue-200">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-8">It provides:</h3>
+            <div className="bg-gradient-to-br from-blue-50 to-teal-50 p-6 sm:p-8 md:p-10 rounded-2xl border-2 border-blue-200">
+              <h3 className="text-2xl font-bold text-slate-800 mb-8">It provides:</h3>
               <ul className="space-y-5 text-gray-700 text-lg">
                 <li className="flex items-start gap-4">
                   <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
@@ -258,17 +258,17 @@ export default function Home() {
       <div className="h-px bg-gray-200"></div>
 
       {/* OPERATIONAL VISIBILITY */}
-      <section className="py-32" style={{ backgroundColor: '#F7F9FB' }}>
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-5xl font-bold text-gray-900 mb-6 text-center">
+      <section className="py-16 sm:py-24 md:py-32" style={{ backgroundColor: '#F7F9FB' }}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 className="text-3xl sm:text-4xl md:text-[36px] font-bold text-slate-900 mb-8 text-center tracking-tight">
             Operational Visibility
           </h2>
-          <p className="text-xl text-gray-700 mb-20 text-center max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-700 mb-12 sm:mb-16 md:mb-20 text-center max-w-2xl mx-auto">
             Retention Health provides real-time insight into early cohort stabilization and retention indicators.
           </p>
           
           {/* Dashboard Image */}
-          <div className="mb-20 max-w-5xl mx-auto">
+          <div className="mb-12 sm:mb-16 md:mb-20 max-w-5xl mx-auto">
             <img 
               src="/mock dash.png" 
               alt="RetentionHealth dashboard showing active GLP-1 patients, month-1 drop-off rate, ARR protected, retention trend, and patient stabilization grid"
@@ -282,21 +282,21 @@ export default function Home() {
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="font-semibold text-gray-900 text-lg">Cohort retention trend monitoring</h3>
+              <h3 className="font-bold text-slate-800 text-xl">Cohort retention trend monitoring</h3>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="font-semibold text-gray-900 text-lg">Active GLP-1 census tracking</h3>
+              <h3 className="font-bold text-slate-800 text-xl">Active GLP-1 census tracking</h3>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <AlertTriangle className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="font-semibold text-gray-900 text-lg">Early churn risk visibility</h3>
+              <h3 className="font-bold text-slate-800 text-xl">Early churn risk visibility</h3>
             </div>
           </div>
         </div>
@@ -305,16 +305,16 @@ export default function Home() {
       <div className="h-px bg-gray-200"></div>
 
       {/* FEATURES GRID */}
-      <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-5xl font-bold text-gray-900 mb-6 text-center">
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 className="text-3xl sm:text-4xl md:text-[36px] font-bold text-slate-900 mb-8 text-center tracking-tight">
             How It Integrates
           </h2>
-          <p className="text-xl text-gray-600 mb-20 text-center max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 mb-12 sm:mb-16 md:mb-20 text-center max-w-3xl mx-auto">
             Outcome-focused infrastructure that reduces operational load and stabilizes patient behavior.
           </p>
           
-          <div className="grid md:grid-cols-2 gap-8 mb-20">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 md:mb-20">
             {/* Patient-Facing Features */}
             <div className="bg-white p-8 rounded-2xl border-2 border-blue-200 shadow-md">
               <div className="flex items-start gap-4 mb-6">
@@ -322,7 +322,7 @@ export default function Home() {
                   <Target className="w-7 h-7 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 text-lg mb-2">Injection-Cycle Guidance</h3>
+                  <h3 className="font-bold text-slate-800 text-xl mb-2">Injection-Cycle Guidance</h3>
                   <p className="text-gray-600 mb-3">Timing-aware nutrition recommendations</p>
                   <p className="text-sm text-blue-600 font-semibold">→ Optimized support timing reduces confusion</p>
                 </div>
@@ -335,7 +335,7 @@ export default function Home() {
                   <TrendingUp className="w-7 h-7 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 text-lg mb-2">Symptom Feedback</h3>
+                  <h3 className="font-bold text-slate-800 text-xl mb-2">Symptom Feedback</h3>
                   <p className="text-gray-600 mb-3">Adaptive responses to patient input</p>
                   <p className="text-sm text-blue-600 font-semibold">→ Personalized guidance during volatility</p>
                 </div>
@@ -348,7 +348,7 @@ export default function Home() {
                   <Utensils className="w-7 h-7 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 text-lg mb-2">Protein Prioritization</h3>
+                  <h3 className="font-bold text-slate-800 text-xl mb-2">Protein Prioritization</h3>
                   <p className="text-gray-600 mb-3">Structured intake during suppression</p>
                   <p className="text-sm text-blue-600 font-semibold">→ Reduces nausea-related drop-off</p>
                 </div>
@@ -362,7 +362,7 @@ export default function Home() {
                   <Users className="w-7 h-7 text-teal-600" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 text-lg mb-2">Active Seat Tracking</h3>
+                  <h3 className="font-bold text-slate-800 text-xl mb-2">Active Seat Tracking</h3>
                   <p className="text-gray-600 mb-3">Real-time patient engagement metrics</p>
                   <p className="text-sm text-teal-600 font-semibold">→ Visibility into program utilization</p>
                 </div>
@@ -375,7 +375,7 @@ export default function Home() {
                   <Zap className="w-7 h-7 text-teal-600" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 text-lg mb-2">Retention Indicators</h3>
+                  <h3 className="font-bold text-slate-800 text-xl mb-2">Retention Indicators</h3>
                   <p className="text-gray-600 mb-3">Early churn risk visibility</p>
                   <p className="text-sm text-teal-600 font-semibold">→ Early alerts enable intervention</p>
                 </div>
@@ -388,7 +388,7 @@ export default function Home() {
                   <DollarSign className="w-7 h-7 text-teal-600" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 text-lg mb-2">Volume Billing</h3>
+                  <h3 className="font-bold text-slate-800 text-xl mb-2">Volume Billing</h3>
                   <p className="text-gray-600 mb-3">Seat-based pricing structure</p>
                   <p className="text-sm text-teal-600 font-semibold">→ Scales with your patient volume</p>
                 </div>
@@ -396,8 +396,8 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="bg-white p-10 rounded-xl border-2 border-blue-200 max-w-3xl mx-auto">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center">Deployment</h3>
+          <div className="bg-white p-6 sm:p-8 md:p-10 rounded-xl border-2 border-blue-200 max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-slate-800 mb-10 text-center">Deployment</h3>
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-blue-600" />
@@ -427,20 +427,20 @@ export default function Home() {
       <div className="h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-blue-500"></div>
 
       {/* PILOT CTA */}
-      <section id="pilot" className="py-20 bg-gradient-to-b from-blue-600 to-teal-600 text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-5xl font-bold mb-6">
+      <section id="pilot" className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-blue-600 to-teal-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-[36px] font-bold mb-8 tracking-tight">
             60-Day Retention Pilot
           </h2>
-          <p className="text-xl mb-4 opacity-90">
+          <p className="text-lg sm:text-xl mb-4 opacity-90">
             Structured evaluation. Not a beta experiment.
           </p>
-          <p className="text-2xl mb-16 max-w-2xl mx-auto">
+          <p className="text-xl sm:text-2xl mb-12 sm:mb-16 max-w-2xl mx-auto">
             Evaluate retention stabilization without restructuring your program.
           </p>
           
-          <div className="bg-white text-gray-900 p-10 rounded-xl mb-12 text-left max-w-2xl mx-auto shadow-2xl">
-            <p className="font-semibold text-gray-900 mb-6 text-xl">Pilot includes:</p>
+          <div className="bg-white text-gray-900 p-6 sm:p-8 md:p-10 rounded-xl mb-8 sm:mb-12 text-left max-w-2xl mx-auto shadow-2xl">
+            <p className="font-bold text-slate-900 mb-8 text-2xl">Pilot includes:</p>
             <ul className="space-y-4 text-gray-700 text-lg mb-8">
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />

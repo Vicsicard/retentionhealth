@@ -6,7 +6,11 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="font-semibold text-gray-900 mb-4">Retention Health</h3>
+            <img 
+              src="/retention logo 1.png" 
+              alt="Retention Health" 
+              className="h-7 mb-4"
+            />
             <p className="text-sm text-gray-600">
               Retention infrastructure for subscription-based healthcare programs.
             </p>

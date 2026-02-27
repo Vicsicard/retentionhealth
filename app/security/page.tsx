@@ -127,10 +127,10 @@ export default function Security() {
             <p className="text-gray-700">
               For security-related inquiries:{" "}
               <a 
-                href="mailto:contact@retentionhealth.com?subject=Security Inquiry"
+                href="mailto:security@retentionhealth.com?subject=Security Inquiry"
                 className="text-blue-600 hover:text-blue-700 font-semibold"
               >
-                contact@retentionhealth.com
+                security@retentionhealth.com
               </a>
             </p>
           </section>
