@@ -154,6 +154,15 @@ export default function Home() {
               See How It Works
             </a>
           </div>
+          
+          {/* Patient Retention Flow Diagram */}
+          <div className="mt-20 max-w-2xl mx-auto">
+            <img 
+              src="/patient retention.png" 
+              alt="Patient retention flow: Clinic Program to Retention Health Layer to Stabilized Patient Behavior to Improved Cohort Retention"
+              className="w-full h-auto"
+            />
+          </div>
         </div>
       </section>
 
