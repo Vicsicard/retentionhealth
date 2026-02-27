@@ -34,38 +34,11 @@ export default function Home() {
             </div>
             
             <div className="bg-white p-8 rounded-2xl border-2 border-gray-200 shadow-lg">
-              <div className="text-center mb-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Month 1 Retention Pattern</h3>
-                <p className="text-sm text-gray-600">Typical drop-off vs. stabilized retention</p>
-              </div>
-              <svg viewBox="0 0 400 200" className="w-full h-auto">
-                {/* Grid lines */}
-                <line x1="40" y1="20" x2="40" y2="160" stroke="#e5e7eb" strokeWidth="2"/>
-                <line x1="40" y1="160" x2="380" y2="160" stroke="#e5e7eb" strokeWidth="2"/>
-                
-                {/* Y-axis labels */}
-                <text x="25" y="25" fontSize="12" fill="#6b7280" textAnchor="end">100%</text>
-                <text x="25" y="95" fontSize="12" fill="#6b7280" textAnchor="end">50%</text>
-                <text x="25" y="165" fontSize="12" fill="#6b7280" textAnchor="end">0%</text>
-                
-                {/* X-axis labels */}
-                <text x="100" y="180" fontSize="12" fill="#6b7280" textAnchor="middle">Week 1</text>
-                <text x="210" y="180" fontSize="12" fill="#6b7280" textAnchor="middle">Week 2</text>
-                <text x="320" y="180" fontSize="12" fill="#6b7280" textAnchor="middle">Week 4</text>
-                
-                {/* Typical drop-off curve (red) */}
-                <path d="M 60 30 Q 150 60, 240 110 T 360 145" stroke="#ef4444" strokeWidth="3" fill="none" strokeDasharray="5,5"/>
-                
-                {/* Stabilized retention curve (blue) */}
-                <path d="M 60 30 Q 150 45, 240 55 T 360 70" stroke="#3b82f6" strokeWidth="3" fill="none"/>
-                
-                {/* Legend */}
-                <line x1="50" y1="195" x2="80" y2="195" stroke="#ef4444" strokeWidth="3" strokeDasharray="5,5"/>
-                <text x="85" y="199" fontSize="11" fill="#6b7280">Typical drop-off</text>
-                
-                <line x1="220" y1="195" x2="250" y2="195" stroke="#3b82f6" strokeWidth="3"/>
-                <text x="255" y="199" fontSize="11" fill="#6b7280">With stabilization</text>
-              </svg>
+              <img 
+                src="/patient drop.png" 
+                alt="GLP-1 patient retention pattern showing rapid drop-off after first injection vs. stabilized retention with $215K+ ARR protected"
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>
