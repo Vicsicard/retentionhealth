@@ -1,14 +1,22 @@
+'use client';
+
+import { useState } from 'react';
 import { TrendingDown, MessageSquare, RefreshCw, AlertTriangle, Target, TrendingUp, Utensils, Users, Zap, DollarSign, CheckCircle, XCircle } from 'lucide-react';
+import PilotModal from '@/components/PilotModal';
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="bg-white">
+      <PilotModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      
       {/* HERO */}
       <section className="bg-gradient-to-b from-white to-gray-50 py-12 sm:py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h1 className="text-4xl sm:text-5xl md:text-[56px] font-extrabold text-slate-900 mb-6 sm:mb-8 leading-tight tracking-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-[56px] font-bold text-slate-900 mb-6 sm:mb-8 leading-tight tracking-tight">
                 Reduce GLP-1 Month-1 Drop-Off.
               </h1>
               <p className="text-lg sm:text-xl text-gray-700 mb-4 sm:mb-6 leading-relaxed">
@@ -18,12 +26,12 @@ export default function Home() {
                 Retention infrastructure for clinics managing 300+ active patients.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a 
-                  href="mailto:contact@retentionhealth.com?subject=Pilot Discussion Request"
+                <button
+                  onClick={() => setIsModalOpen(true)}
                   className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 text-lg shadow-md text-center"
                 >
-                  Schedule Pilot Discussion
-                </a>
+                  Request Pilot Discussion
+                </button>
                 <a 
                   href="#revenue"
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 text-lg border-2 border-blue-600 text-center"
@@ -464,12 +472,12 @@ export default function Home() {
             </p>
           </div>
           
-          <a 
-            href="mailto:contact@retentionhealth.com?subject=Pilot Discussion Request"
+          <button
+            onClick={() => setIsModalOpen(true)}
             className="inline-block bg-white text-blue-600 px-12 py-5 rounded-lg font-bold hover:bg-gray-100 text-xl shadow-2xl"
           >
-            Schedule Pilot Discussion
-          </a>
+            Request Pilot Discussion
+          </button>
         </div>
       </section>
 

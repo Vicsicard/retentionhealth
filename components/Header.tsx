@@ -14,7 +14,7 @@ export default function Header() {
             <img 
               src="/retention logo 1.png" 
               alt="Retention Health" 
-              className="h-7 sm:h-8"
+              className="h-12 sm:h-14"
             />
           </Link>
           
