@@ -1,24 +1,47 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import PilotModal from './PilotModal';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-4">
-        <div className="flex justify-between items-center">
-          <Link href="/" className="flex items-center">
-            <span className="text-2xl font-semibold tracking-tight">
-              <span className="text-slate-900">Retention</span>
-              <span className="text-blue-600">Health</span>
-            </span>
-          </Link>
-          
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
+    <>
+      <PilotModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      
+      <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div className={`max-w-6xl mx-auto px-4 sm:px-6 ${isScrolled ? 'pt-4 pb-3' : 'pt-6 pb-4'}`}>
+          <div className="flex justify-between items-center">
+            <Link href="/" className="flex items-center">
+              <span className="text-2xl font-semibold tracking-tight">
+                <span className="text-slate-900">Retention</span>
+                <span className="text-blue-600">Health</span>
+              </span>
+            </Link>
+            
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
+              {isScrolled && (
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="bg-blue-600 text-white px-5 py-2 rounded font-semibold hover:bg-blue-700"
+                >
+                  Request Pilot Discussion
+                </button>
+              )}
             <a href="/#problem" className="text-gray-600 hover:text-gray-900">
               How It Helps
             </a>
@@ -118,5 +141,6 @@ export default function Header() {
         )}
       </div>
     </header>
+    </>
   );
 }
