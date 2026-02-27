@@ -8,18 +8,18 @@ export default function Header() {
 
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center">
             <img 
               src="/retention logo 1.png" 
               alt="Retention Health" 
-              className="h-12 sm:h-14"
+              className="h-14 sm:h-16"
             />
           </Link>
           
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6 text-sm">
+          <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
             <a href="/#problem" className="text-gray-600 hover:text-gray-900">
               How It Helps
             </a>
@@ -64,7 +64,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="lg:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
+          <nav className="lg:hidden mt-4 pb-4 border-t border-gray-200 pt-4 font-medium">
             <div className="flex flex-col space-y-3">
               <a 
                 href="/#problem" 
