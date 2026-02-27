@@ -65,13 +65,27 @@ export default function PilotModal({ isOpen, onClose }: PilotModalProps) {
   };
 
   const handleSubmit = async () => {
-    // TODO: Send to Cloudflare D1/KV + SendGrid
-    console.log('Form submitted:', formData);
-    
-    // Clear localStorage
-    localStorage.removeItem(STORAGE_KEY);
-    
-    setIsSubmitted(true);
+    try {
+      const response = await fetch('/api/pilot-request', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+
+      // Clear localStorage on success
+      localStorage.removeItem(STORAGE_KEY);
+      
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting your request. Please try again or email us directly at contact@retentionhealth.com');
+    }
   };
 
   const handleClose = () => {
