@@ -257,6 +257,53 @@ export default function Home() {
 
       <div className="h-px bg-gray-200"></div>
 
+      {/* OPERATIONAL VISIBILITY */}
+      <section className="py-32" style={{ backgroundColor: '#F7F9FB' }}>
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-5xl font-bold text-gray-900 mb-6 text-center">
+            Operational Visibility
+          </h2>
+          <p className="text-xl text-gray-700 mb-20 text-center max-w-2xl mx-auto">
+            Retention Health provides real-time insight into early cohort stabilization and retention indicators.
+          </p>
+          
+          {/* Dashboard Image */}
+          <div className="mb-20 max-w-5xl mx-auto">
+            <img 
+              src="/mock dash.png" 
+              alt="RetentionHealth dashboard showing active GLP-1 patients, month-1 drop-off rate, ARR protected, retention trend, and patient stabilization grid"
+              className="w-full h-auto rounded-xl shadow-lg"
+            />
+          </div>
+          
+          {/* Key Features */}
+          <div className="grid md:grid-cols-3 gap-12 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="font-semibold text-gray-900 text-lg">Cohort retention trend monitoring</h3>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="font-semibold text-gray-900 text-lg">Active GLP-1 census tracking</h3>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <AlertTriangle className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="font-semibold text-gray-900 text-lg">Early churn risk visibility</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="h-px bg-gray-200"></div>
+
       {/* FEATURES GRID */}
       <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto px-6">
