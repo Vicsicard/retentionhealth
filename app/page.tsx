@@ -1,3 +1,5 @@
+import { TrendingDown, MessageSquare, RefreshCw, AlertTriangle, Target, TrendingUp, Utensils, Users, Zap, DollarSign, CheckCircle, XCircle } from 'lucide-react';
+
 export default function Home() {
   return (
     <div className="bg-white">
@@ -41,8 +43,8 @@ export default function Home() {
           
           <div className="grid md:grid-cols-2 gap-x-12 gap-y-8 max-w-4xl mx-auto">
             <div className="flex gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl">
-                📊
+              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                <TrendingDown className="w-6 h-6 text-blue-600" />
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 text-lg mb-2">Appetite volatility after injection</h3>
@@ -51,8 +53,8 @@ export default function Home() {
             </div>
             
             <div className="flex gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl">
-                💬
+              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                <MessageSquare className="w-6 h-6 text-blue-600" />
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 text-lg mb-2">Support inbox spikes</h3>
@@ -61,8 +63,8 @@ export default function Home() {
             </div>
             
             <div className="flex gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl">
-                🔄
+              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                <RefreshCw className="w-6 h-6 text-blue-600" />
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 text-lg mb-2">Nausea uncertainty</h3>
@@ -71,8 +73,8 @@ export default function Home() {
             </div>
             
             <div className="flex gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl">
-                ⚠️
+              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                <AlertTriangle className="w-6 h-6 text-blue-600" />
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 text-lg mb-2">Early drop-off before month two</h3>
@@ -157,15 +159,15 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-gray-900 mb-6">It does not:</h3>
               <ul className="space-y-4 text-gray-700 text-lg">
                 <li className="flex items-start gap-3">
-                  <span className="text-red-500 font-bold">✕</span>
+                  <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
                   <span>Replace prescribing</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-red-500 font-bold">✕</span>
+                  <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
                   <span>Replace your EMR</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-red-500 font-bold">✕</span>
+                  <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
                   <span>Require coaching staff</span>
                 </li>
               </ul>
@@ -175,15 +177,15 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-gray-900 mb-6">It provides:</h3>
               <ul className="space-y-4 text-gray-700 text-lg">
                 <li className="flex items-start gap-3">
-                  <span className="text-blue-600 font-bold">✓</span>
+                  <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                   <span>Injection-cycle–aware nutrition structure</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-blue-600 font-bold">✓</span>
+                  <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                   <span>Symptom-adaptive recommendations</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-blue-600 font-bold">✓</span>
+                  <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                   <span>First 30-day stabilization</span>
                 </li>
               </ul>
@@ -212,48 +214,48 @@ export default function Home() {
           
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="bg-white p-6 rounded-xl border border-gray-200 text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center text-3xl mx-auto mb-4">
-                🎯
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Target className="w-8 h-8 text-blue-600" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-3">Injection-Cycle Guidance</h3>
               <p className="text-gray-600 text-sm">Timing-aware nutrition recommendations</p>
             </div>
             
             <div className="bg-white p-6 rounded-xl border border-gray-200 text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center text-3xl mx-auto mb-4">
-                📈
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-8 h-8 text-blue-600" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-3">Symptom Feedback</h3>
               <p className="text-gray-600 text-sm">Adaptive responses to patient input</p>
             </div>
             
             <div className="bg-white p-6 rounded-xl border border-gray-200 text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center text-3xl mx-auto mb-4">
-                🥗
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Utensils className="w-8 h-8 text-blue-600" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-3">Protein Prioritization</h3>
               <p className="text-gray-600 text-sm">Structured intake during suppression</p>
             </div>
             
             <div className="bg-white p-6 rounded-xl border border-gray-200 text-center">
-              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center text-3xl mx-auto mb-4">
-                👥
+              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-teal-600" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-3">Active Seat Tracking</h3>
               <p className="text-gray-600 text-sm">Real-time patient engagement metrics</p>
             </div>
             
             <div className="bg-white p-6 rounded-xl border border-gray-200 text-center">
-              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center text-3xl mx-auto mb-4">
-                ⚡
+              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-8 h-8 text-teal-600" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-3">Retention Indicators</h3>
               <p className="text-gray-600 text-sm">Early churn risk visibility</p>
             </div>
             
             <div className="bg-white p-6 rounded-xl border border-gray-200 text-center">
-              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center text-3xl mx-auto mb-4">
-                💰
+              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <DollarSign className="w-8 h-8 text-teal-600" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-3">Volume Billing</h3>
               <p className="text-gray-600 text-sm">Seat-based pricing structure</p>
@@ -264,19 +266,19 @@ export default function Home() {
             <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center">Deployment</h3>
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="flex items-center gap-3">
-                <span className="text-blue-600 text-xl">✓</span>
+                <CheckCircle className="w-5 h-5 text-blue-600" />
                 <span className="text-gray-700">300+ active patients</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-blue-600 text-xl">✓</span>
+                <CheckCircle className="w-5 h-5 text-blue-600" />
                 <span className="text-gray-700">Subdomain deployment</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-blue-600 text-xl">✓</span>
+                <CheckCircle className="w-5 h-5 text-blue-600" />
                 <span className="text-gray-700">Custom branding</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-blue-600 text-xl">✓</span>
+                <CheckCircle className="w-5 h-5 text-blue-600" />
                 <span className="text-gray-700">No EMR required (MVP)</span>
               </div>
             </div>
@@ -307,19 +309,19 @@ export default function Home() {
             <p className="font-semibold text-gray-900 mb-6 text-xl">Pilot includes:</p>
             <ul className="space-y-4 text-gray-700 text-lg mb-8">
               <li className="flex items-start gap-3">
-                <span className="text-blue-600 font-bold">✓</span>
+                <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                 <span>White-label configuration</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-blue-600 font-bold">✓</span>
+                <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                 <span>Baseline retention modeling</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-blue-600 font-bold">✓</span>
+                <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                 <span>Active seat reporting</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-blue-600 font-bold">✓</span>
+                <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                 <span>Founder-led onboarding</span>
               </li>
             </ul>
