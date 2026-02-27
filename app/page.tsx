@@ -4,27 +4,69 @@ export default function Home() {
   return (
     <div className="bg-white">
       {/* HERO */}
-      <section className="bg-gradient-to-b from-white to-gray-50 py-20">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h1 className="text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Reduce GLP-1 Month-1 Drop-Off.
-          </h1>
-          <p className="text-2xl text-gray-600 mb-10 max-w-3xl mx-auto">
-            Retention infrastructure for subscription-based GLP-1 clinics managing 300+ active patients.
-          </p>
-          <div className="flex gap-4 justify-center">
-            <a 
-              href="mailto:contact@retentionhealth.com?subject=Pilot Discussion Request"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 text-lg shadow-md"
-            >
-              Schedule Pilot Discussion
-            </a>
-            <a 
-              href="#revenue"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 text-lg border-2 border-blue-600"
-            >
-              View Revenue Impact
-            </a>
+      <section className="bg-gradient-to-b from-white to-gray-50 py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                Reduce GLP-1 Month-1 Drop-Off.
+              </h1>
+              <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+                Built for GLP-1 subscription programs that want to stabilize early retention.
+              </p>
+              <p className="text-lg text-gray-600 mb-10">
+                Retention infrastructure for clinics managing 300+ active patients.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="mailto:contact@retentionhealth.com?subject=Pilot Discussion Request"
+                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 text-lg shadow-md text-center"
+                >
+                  Schedule Pilot Discussion
+                </a>
+                <a 
+                  href="#revenue"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 text-lg border-2 border-blue-600 text-center"
+                >
+                  View Revenue Impact
+                </a>
+              </div>
+            </div>
+            
+            <div className="bg-white p-8 rounded-2xl border-2 border-gray-200 shadow-lg">
+              <div className="text-center mb-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Month 1 Retention Pattern</h3>
+                <p className="text-sm text-gray-600">Typical drop-off vs. stabilized retention</p>
+              </div>
+              <svg viewBox="0 0 400 200" className="w-full h-auto">
+                {/* Grid lines */}
+                <line x1="40" y1="20" x2="40" y2="160" stroke="#e5e7eb" strokeWidth="2"/>
+                <line x1="40" y1="160" x2="380" y2="160" stroke="#e5e7eb" strokeWidth="2"/>
+                
+                {/* Y-axis labels */}
+                <text x="25" y="25" fontSize="12" fill="#6b7280" textAnchor="end">100%</text>
+                <text x="25" y="95" fontSize="12" fill="#6b7280" textAnchor="end">50%</text>
+                <text x="25" y="165" fontSize="12" fill="#6b7280" textAnchor="end">0%</text>
+                
+                {/* X-axis labels */}
+                <text x="100" y="180" fontSize="12" fill="#6b7280" textAnchor="middle">Week 1</text>
+                <text x="210" y="180" fontSize="12" fill="#6b7280" textAnchor="middle">Week 2</text>
+                <text x="320" y="180" fontSize="12" fill="#6b7280" textAnchor="middle">Week 4</text>
+                
+                {/* Typical drop-off curve (red) */}
+                <path d="M 60 30 Q 150 60, 240 110 T 360 145" stroke="#ef4444" strokeWidth="3" fill="none" strokeDasharray="5,5"/>
+                
+                {/* Stabilized retention curve (blue) */}
+                <path d="M 60 30 Q 150 45, 240 55 T 360 70" stroke="#3b82f6" strokeWidth="3" fill="none"/>
+                
+                {/* Legend */}
+                <line x1="50" y1="195" x2="80" y2="195" stroke="#ef4444" strokeWidth="3" strokeDasharray="5,5"/>
+                <text x="85" y="199" fontSize="11" fill="#6b7280">Typical drop-off</text>
+                
+                <line x1="220" y1="195" x2="250" y2="195" stroke="#3b82f6" strokeWidth="3"/>
+                <text x="255" y="199" fontSize="11" fill="#6b7280">With stabilization</text>
+              </svg>
+            </div>
           </div>
         </div>
       </section>
@@ -145,47 +187,75 @@ export default function Home() {
       <div className="h-px bg-gray-200"></div>
 
       {/* PRODUCT DEFINITION */}
-      <section id="solution" className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6 text-center">
+      <section id="solution" className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-5xl font-bold text-gray-900 mb-8 text-center">
             What Retention Health Actually Is
           </h2>
           <p className="text-2xl text-gray-900 mb-16 text-center font-semibold max-w-3xl mx-auto leading-relaxed">
             A white-label behavioral stabilization layer that sits inside your GLP-1 program.
           </p>
           
+          {/* Product Flow Diagram */}
+          <div className="bg-gradient-to-r from-blue-50 to-teal-50 p-12 rounded-2xl border-2 border-blue-200 mb-20">
+            <div className="grid md:grid-cols-3 gap-8 items-center max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="bg-white p-6 rounded-xl shadow-md mb-4">
+                  <p className="font-semibold text-gray-900 text-lg">Your Clinic Program</p>
+                </div>
+                <p className="text-sm text-gray-600">Prescribing & clinical care</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-4xl text-blue-600 mb-2">→</div>
+                <div className="bg-blue-600 text-white p-6 rounded-xl shadow-lg mb-4">
+                  <p className="font-bold text-lg">RetentionHealth Layer</p>
+                </div>
+                <p className="text-sm text-gray-600">Behavioral stabilization</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-4xl text-blue-600 mb-2">→</div>
+                <div className="bg-white p-6 rounded-xl shadow-md mb-4">
+                  <p className="font-semibold text-gray-900 text-lg">Stabilized Behavior</p>
+                </div>
+                <p className="text-sm text-gray-600">Reduced early churn</p>
+              </div>
+            </div>
+          </div>
+          
           <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <div className="bg-gray-50 p-8 rounded-xl border border-gray-200">
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">It does not:</h3>
-              <ul className="space-y-4 text-gray-700 text-lg">
-                <li className="flex items-start gap-3">
-                  <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+            <div className="bg-gray-50 p-10 rounded-2xl border-2 border-gray-200">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-8">It does not:</h3>
+              <ul className="space-y-5 text-gray-700 text-lg">
+                <li className="flex items-start gap-4">
+                  <XCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
                   <span>Replace prescribing</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                <li className="flex items-start gap-4">
+                  <XCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
                   <span>Replace your EMR</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                <li className="flex items-start gap-4">
+                  <XCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
                   <span>Require coaching staff</span>
                 </li>
               </ul>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-50 to-teal-50 p-8 rounded-xl border border-blue-200">
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">It provides:</h3>
-              <ul className="space-y-4 text-gray-700 text-lg">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+            <div className="bg-gradient-to-br from-blue-50 to-teal-50 p-10 rounded-2xl border-2 border-blue-200">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-8">It provides:</h3>
+              <ul className="space-y-5 text-gray-700 text-lg">
+                <li className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
                   <span>Injection-cycle–aware nutrition structure</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <li className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
                   <span>Symptom-adaptive recommendations</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <li className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
                   <span>First 30-day stabilization</span>
                 </li>
               </ul>
@@ -195,7 +265,7 @@ export default function Home() {
           <div className="text-center">
             <a 
               href="mailto:contact@retentionhealth.com?subject=Product Discussion"
-              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 text-lg border-2 border-blue-600"
+              className="inline-block bg-blue-600 text-white px-10 py-4 rounded-lg font-semibold hover:bg-blue-700 text-lg shadow-md"
             >
               Discuss Your Program
             </a>
@@ -206,59 +276,94 @@ export default function Home() {
       <div className="h-px bg-gray-200"></div>
 
       {/* FEATURES GRID */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 mb-16 text-center">
+      <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-5xl font-bold text-gray-900 mb-6 text-center">
             How It Integrates
           </h2>
+          <p className="text-xl text-gray-600 mb-20 text-center max-w-3xl mx-auto">
+            Outcome-focused infrastructure that reduces operational load and stabilizes patient behavior.
+          </p>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white p-6 rounded-xl border border-gray-200 text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-blue-600" />
+          <div className="grid md:grid-cols-2 gap-8 mb-20">
+            {/* Patient-Facing Features */}
+            <div className="bg-white p-8 rounded-2xl border-2 border-blue-200 shadow-md">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Target className="w-7 h-7 text-blue-600" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900 text-lg mb-2">Injection-Cycle Guidance</h3>
+                  <p className="text-gray-600 mb-3">Timing-aware nutrition recommendations</p>
+                  <p className="text-sm text-blue-600 font-semibold">→ Optimized support timing reduces confusion</p>
+                </div>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-3">Injection-Cycle Guidance</h3>
-              <p className="text-gray-600 text-sm">Timing-aware nutrition recommendations</p>
             </div>
             
-            <div className="bg-white p-6 rounded-xl border border-gray-200 text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-blue-600" />
+            <div className="bg-white p-8 rounded-2xl border-2 border-blue-200 shadow-md">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <TrendingUp className="w-7 h-7 text-blue-600" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900 text-lg mb-2">Symptom Feedback</h3>
+                  <p className="text-gray-600 mb-3">Adaptive responses to patient input</p>
+                  <p className="text-sm text-blue-600 font-semibold">→ Personalized guidance during volatility</p>
+                </div>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-3">Symptom Feedback</h3>
-              <p className="text-gray-600 text-sm">Adaptive responses to patient input</p>
             </div>
             
-            <div className="bg-white p-6 rounded-xl border border-gray-200 text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Utensils className="w-8 h-8 text-blue-600" />
+            <div className="bg-white p-8 rounded-2xl border-2 border-blue-200 shadow-md">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Utensils className="w-7 h-7 text-blue-600" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900 text-lg mb-2">Protein Prioritization</h3>
+                  <p className="text-gray-600 mb-3">Structured intake during suppression</p>
+                  <p className="text-sm text-blue-600 font-semibold">→ Reduces nausea-related drop-off</p>
+                </div>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-3">Protein Prioritization</h3>
-              <p className="text-gray-600 text-sm">Structured intake during suppression</p>
             </div>
             
-            <div className="bg-white p-6 rounded-xl border border-gray-200 text-center">
-              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-teal-600" />
+            {/* Clinic-Facing Features */}
+            <div className="bg-white p-8 rounded-2xl border-2 border-teal-200 shadow-md">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Users className="w-7 h-7 text-teal-600" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900 text-lg mb-2">Active Seat Tracking</h3>
+                  <p className="text-gray-600 mb-3">Real-time patient engagement metrics</p>
+                  <p className="text-sm text-teal-600 font-semibold">→ Visibility into program utilization</p>
+                </div>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-3">Active Seat Tracking</h3>
-              <p className="text-gray-600 text-sm">Real-time patient engagement metrics</p>
             </div>
             
-            <div className="bg-white p-6 rounded-xl border border-gray-200 text-center">
-              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-teal-600" />
+            <div className="bg-white p-8 rounded-2xl border-2 border-teal-200 shadow-md">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Zap className="w-7 h-7 text-teal-600" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900 text-lg mb-2">Retention Indicators</h3>
+                  <p className="text-gray-600 mb-3">Early churn risk visibility</p>
+                  <p className="text-sm text-teal-600 font-semibold">→ Early alerts enable intervention</p>
+                </div>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-3">Retention Indicators</h3>
-              <p className="text-gray-600 text-sm">Early churn risk visibility</p>
             </div>
             
-            <div className="bg-white p-6 rounded-xl border border-gray-200 text-center">
-              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <DollarSign className="w-8 h-8 text-teal-600" />
+            <div className="bg-white p-8 rounded-2xl border-2 border-teal-200 shadow-md">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <DollarSign className="w-7 h-7 text-teal-600" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900 text-lg mb-2">Volume Billing</h3>
+                  <p className="text-gray-600 mb-3">Seat-based pricing structure</p>
+                  <p className="text-sm text-teal-600 font-semibold">→ Scales with your patient volume</p>
+                </div>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-3">Volume Billing</h3>
-              <p className="text-gray-600 text-sm">Seat-based pricing structure</p>
             </div>
           </div>
           
