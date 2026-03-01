@@ -1,40 +1,37 @@
-addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request, event.env));
-});
-
-async function handleRequest(request, env) {
-  // Handle CORS preflight
-  if (request.method === 'OPTIONS') {
-    return new Response(null, {
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'POST, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type',
-      },
-    });
-  }
-
-  if (request.method !== 'POST') {
-    return new Response('Method not allowed', { status: 405 });
-  }
-
-  try {
-    const data = await request.json();
-    const { name, email, company, message } = data;
-
-    // Validate required fields
-    if (!name || !email || !message) {
-      return new Response(JSON.stringify({ error: 'Name, email, and message are required' }), {
-        status: 400,
+export default {
+  async fetch(request, env, ctx) {
+    // Handle CORS preflight
+    if (request.method === 'OPTIONS') {
+      return new Response(null, {
         headers: {
-          'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'POST, OPTIONS',
+          'Access-Control-Allow-Headers': 'Content-Type',
         },
       });
     }
 
-    const SENDGRID_API_KEY = env.SENDGRID_API_KEY;
-    const NOTIFICATION_EMAIL = env.NOTIFICATION_EMAIL || 'contact@retentionhealth.com';
+    if (request.method !== 'POST') {
+      return new Response('Method not allowed', { status: 405 });
+    }
+
+    try {
+      const data = await request.json();
+      const { name, email, company, message } = data;
+
+      // Validate required fields
+      if (!name || !email || !message) {
+        return new Response(JSON.stringify({ error: 'Name, email, and message are required' }), {
+          status: 400,
+          headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+          },
+        });
+      }
+
+      const SENDGRID_API_KEY = env.SENDGRID_API_KEY;
+      const NOTIFICATION_EMAIL = env.NOTIFICATION_EMAIL || 'contact@retentionhealth.com';
 
     // Email to you (notification)
     const emailData = {
@@ -99,17 +96,18 @@ async function handleRequest(request, env) {
       },
     });
 
-  } catch (error) {
-    console.error('Error processing contact form:', error);
-    return new Response(JSON.stringify({ 
-      error: 'Failed to send message',
-      details: error.message || 'Unknown error'
-    }), {
-      status: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-      },
-    });
+    } catch (error) {
+      console.error('Error processing contact form:', error);
+      return new Response(JSON.stringify({ 
+        error: 'Failed to send message',
+        details: error.message || 'Unknown error'
+      }), {
+        status: 500,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+        },
+      });
+    }
   }
-}
+};
