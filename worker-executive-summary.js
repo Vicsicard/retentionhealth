@@ -173,19 +173,17 @@ export default {
               ` : ''}
               
               <div style="background: #eff6ff; border: 2px solid #3b82f6; border-radius: 8px; padding: 20px; margin: 30px 0;">
-                <h3 style="margin-top: 0; color: #1e293b;">Next Step: Strategic Review</h3>
-                <p style="margin-bottom: 15px;">We recommend a 20-minute executive review to:</p>
+                <h3 style="margin-top: 0; color: #1e293b;">Next Step: Executive Review</h3>
+                <p style="margin-bottom: 15px;">We'll coordinate a 20-minute strategic session to:</p>
                 <ul style="line-height: 1.8;">
                   <li>Walk through your specific exposure analysis</li>
                   <li>Discuss stabilization architecture options</li>
                   <li>Review pricing relative to your exposure</li>
                 </ul>
-                <p style="text-align: center; margin-top: 20px;">
-                  <a href="https://calendly.com/retentionhealth/executive-review" 
-                     style="background: #3b82f6; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; display: inline-block; font-weight: bold;">
-                    Schedule Your Executive Review
-                  </a>
-                </p>
+                <div style="background: #dbeafe; border-left: 4px solid #3b82f6; padding: 15px; margin-top: 20px;">
+                  <p style="margin: 0; font-weight: bold; color: #1e293b;">📧 We'll send you scheduling options within 24 hours</p>
+                  <p style="margin: 10px 0 0 0; font-size: 14px; color: #475569;">Watch for our email from contact@retentionhealth.com (check spam/junk folder if needed)</p>
+                </div>
               </div>
               
               <p style="color: #64748b; font-size: 14px; margin-top: 30px;">

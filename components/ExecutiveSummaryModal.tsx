@@ -150,28 +150,27 @@ export default function ExecutiveSummaryModal({ isOpen, onClose, calculatorData 
                 </svg>
               </div>
               <h2 className="text-2xl font-bold text-slate-900 mb-4">
-                Your Executive Exposure Summary Has Been Prepared
+                Your Request Has Been Received
               </h2>
-              <p className="text-base text-gray-700 mb-8">
-                We recommend reviewing this in a 20-minute strategic session.
+              <p className="text-base text-gray-700 mb-4">
+                We&apos;ll send you a scheduling confirmation within 24 hours to coordinate your executive review.
               </p>
               
-              <div className="space-y-3">
-                <a
-                  href="https://calendly.com/retentionhealth/executive-review"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                >
-                  Schedule Executive Review
-                </a>
-                <button
-                  onClick={handleClose}
-                  className="block w-full bg-white text-gray-700 px-8 py-4 rounded-lg font-semibold border-2 border-gray-300 hover:bg-gray-50 transition-colors"
-                >
-                  I&apos;ll Review This Internally First
-                </button>
+              <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4 mb-6">
+                <p className="text-sm text-slate-900 font-semibold mb-2">
+                  📧 Watch for our email from contact@retentionhealth.com
+                </p>
+                <p className="text-xs text-gray-600">
+                  Please check your spam/junk folder if you don&apos;t see it in your inbox.
+                </p>
               </div>
+              
+              <button
+                onClick={handleClose}
+                className="block w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              >
+                Got It
+              </button>
             </div>
           )}
         </div>
