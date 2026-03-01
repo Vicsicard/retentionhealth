@@ -44,12 +44,12 @@ export default function Header() {
             <Link href="/security" className="text-gray-600 hover:text-gray-900">
               Security
             </Link>
-            <a 
-              href="mailto:contact@retentionhealth.com"
+            <Link 
+              href="/contact"
               className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
             >
               Contact
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -107,12 +107,13 @@ export default function Header() {
               >
                 Security
               </Link>
-              <a 
-                href="mailto:contact@retentionhealth.com"
+              <Link 
+                href="/contact"
                 className="bg-blue-600 text-white px-4 py-3 rounded hover:bg-blue-700 text-center"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
-              </a>
+              </Link>
             </div>
           </nav>
         )}
