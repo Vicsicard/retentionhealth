@@ -44,13 +44,17 @@ export default function ExecutiveSummaryModal({ isOpen, onClose, calculatorData 
       });
 
       if (!response.ok) {
+        const errorText = await response.text();
+        console.error('API Error:', errorText);
         throw new Error('Failed to submit');
       }
 
+      const result = await response.json();
+      console.log('Submission successful:', result);
       setIsSubmitted(true);
     } catch (error) {
       console.error('Error submitting:', error);
-      alert('There was an error. Please try again or email us directly at contact@retentionhealth.com');
+      alert('There was an error submitting your request. Please try again or email us directly at contact@retentionhealth.com');
     } finally {
       setIsSubmitting(false);
     }

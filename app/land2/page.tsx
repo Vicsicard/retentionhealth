@@ -33,12 +33,12 @@ export default function Land2() {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-x-hidden w-full">
       <PilotModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       
       {/* SECTION 1 — HERO */}
-      <section className="bg-gradient-to-b from-white to-gray-50 py-12 sm:py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <section className="bg-gradient-to-b from-white to-gray-50 py-12 sm:py-16 md:py-24 w-full">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl md:text-[56px] font-bold text-slate-900 mb-6 sm:mb-8 leading-tight tracking-tight">
               The Instability Window Is Where You Lose the Patient.
@@ -77,8 +77,8 @@ export default function Land2() {
       <div className="h-px bg-gray-200"></div>
 
       {/* SECTION 2 — VIDEO 3 (AUTHORITY ANCHOR) */}
-      <section id="video" className="py-12 sm:py-16 md:py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+      <section id="video" className="py-12 sm:py-16 md:py-20 bg-white w-full">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 w-full">
           <h2 className="text-3xl sm:text-4xl md:text-[36px] font-bold text-slate-900 mb-8 text-center tracking-tight">
             This Is Where Clinics Lose Control
           </h2>
@@ -596,8 +596,8 @@ export default function Land2() {
       <div className="h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-blue-500"></div>
 
       {/* CALCULATOR SECTION */}
-      <section id="calculator" className="py-12 sm:py-16 md:py-24 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+      <section id="calculator" className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white w-full">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 w-full">
           <h2 className="text-3xl sm:text-4xl md:text-[36px] font-bold text-slate-900 mb-4 text-center tracking-tight">
             Quantify Your 90-Day Instability Exposure
           </h2>
@@ -615,7 +615,7 @@ export default function Land2() {
           </p>
           
           {/* Calculator Form - Premium Diagnostic Console */}
-          <div className="max-w-2xl mx-auto bg-white p-10 rounded-2xl border-2 border-slate-300 shadow-2xl mb-16">
+          <div className="max-w-2xl mx-auto bg-white p-4 sm:p-6 md:p-10 rounded-2xl border-2 border-slate-300 shadow-2xl mb-16">
             <div className="space-y-8">
               <div>
                 <label className="block text-sm font-bold text-slate-900 mb-3 tracking-wide uppercase">
@@ -719,7 +719,7 @@ export default function Land2() {
           
           {/* Results Section - Financial Briefing */}
           {showResults && (
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-3xl mx-auto w-full px-2">
               <div className="bg-slate-900 text-white p-8 rounded-t-2xl">
                 <h3 className="text-2xl font-bold text-center tracking-wide uppercase">
                   Your 90-Day Instability Exposure
@@ -727,11 +727,11 @@ export default function Land2() {
               </div>
               
               <div className="space-y-6 mb-12">
-                <div className="bg-white p-10 border-2 border-slate-300 shadow-lg">
-                  <p className="text-sm text-gray-600 mb-3 font-bold tracking-wide uppercase">
+                <div className="bg-white p-4 sm:p-6 md:p-10 border-2 border-slate-300 shadow-lg overflow-hidden">
+                  <p className="text-xs sm:text-sm text-gray-600 mb-3 font-bold tracking-wide uppercase">
                     Estimated Monthly Revenue Lost to Early Instability
                   </p>
-                  <p className="text-5xl font-bold text-slate-900 mb-3">
+                  <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-3 break-words">
                     ${monthlyLoss.toLocaleString()}
                   </p>
                   <p className="text-sm text-gray-600 leading-relaxed">
@@ -739,11 +739,11 @@ export default function Land2() {
                   </p>
                 </div>
                 
-                <div className="bg-gradient-to-br from-red-50 to-orange-50 p-10 border-2 border-red-300 shadow-xl">
-                  <p className="text-sm text-slate-900 mb-3 font-bold tracking-wide uppercase">
+                <div className="bg-gradient-to-br from-red-50 to-orange-50 p-4 sm:p-6 md:p-10 border-2 border-red-300 shadow-xl overflow-hidden">
+                  <p className="text-xs sm:text-sm text-slate-900 mb-3 font-bold tracking-wide uppercase">
                     Projected Annual Revenue at Risk
                   </p>
-                  <p className="text-6xl font-bold text-red-600 mb-4">
+                  <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-red-600 mb-4 break-words">
                     ${annualLoss.toLocaleString()}
                   </p>
                   <p className="text-base text-slate-900 font-bold mb-4">
@@ -757,15 +757,15 @@ export default function Land2() {
               </div>
               
               {/* Cost of Inaction */}
-              <div className="bg-slate-900 text-white p-10 rounded-2xl mb-12 border-2 border-slate-700 shadow-2xl">
-                <h4 className="text-xl font-bold mb-6 text-center tracking-wide uppercase">
+              <div className="bg-slate-900 text-white p-4 sm:p-6 md:p-10 rounded-2xl mb-12 border-2 border-slate-700 shadow-2xl overflow-hidden">
+                <h4 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 text-center tracking-wide uppercase">
                   If Nothing Changes
                 </h4>
-                <p className="text-lg mb-3 text-center text-gray-300">Over 3 Years:</p>
-                <p className="text-6xl font-bold text-center mb-4">
+                <p className="text-sm sm:text-base md:text-lg mb-2 sm:mb-3 text-center text-gray-300">Over 3 Years:</p>
+                <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-3 sm:mb-4 break-words px-2">
                   ${threeYearLoss.toLocaleString()}
                 </p>
-                <p className="text-center text-gray-400 text-sm">
+                <p className="text-center text-gray-400 text-xs sm:text-sm px-2">
                   in cumulative instability exposure.
                 </p>
               </div>
@@ -791,29 +791,29 @@ export default function Land2() {
                   If Early Instability Were Reduced By:
                 </p>
                 
-                <div className="grid md:grid-cols-3 gap-6 mb-8">
-                  <div className="bg-white p-6 rounded-xl border-2 border-blue-200 text-center">
-                    <p className="text-3xl font-bold text-blue-600 mb-2">10%</p>
-                    <p className="text-sm text-gray-600 mb-3">Reduction</p>
-                    <p className="text-2xl font-bold text-slate-900">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-8">
+                  <div className="bg-white p-4 sm:p-6 rounded-xl border-2 border-blue-200 text-center">
+                    <p className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">10%</p>
+                    <p className="text-xs sm:text-sm text-gray-600 mb-3">Reduction</p>
+                    <p className="text-xl sm:text-2xl font-bold text-slate-900">
                       ${recoveredRevenue10.toLocaleString()}
                     </p>
                     <p className="text-xs text-gray-600 mt-2">Recovered annually</p>
                   </div>
                   
-                  <div className="bg-white p-6 rounded-xl border-2 border-blue-400 text-center shadow-lg">
-                    <p className="text-3xl font-bold text-blue-600 mb-2">15%</p>
-                    <p className="text-sm text-gray-600 mb-3">Reduction</p>
-                    <p className="text-2xl font-bold text-slate-900">
+                  <div className="bg-white p-4 sm:p-6 rounded-xl border-2 border-blue-400 text-center shadow-lg">
+                    <p className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">15%</p>
+                    <p className="text-xs sm:text-sm text-gray-600 mb-3">Reduction</p>
+                    <p className="text-xl sm:text-2xl font-bold text-slate-900">
                       ${recoveredRevenue15.toLocaleString()}
                     </p>
                     <p className="text-xs text-gray-600 mt-2">Recovered annually</p>
                   </div>
                   
-                  <div className="bg-white p-6 rounded-xl border-2 border-blue-200 text-center">
-                    <p className="text-3xl font-bold text-blue-600 mb-2">20%</p>
-                    <p className="text-sm text-gray-600 mb-3">Reduction</p>
-                    <p className="text-2xl font-bold text-slate-900">
+                  <div className="bg-white p-4 sm:p-6 rounded-xl border-2 border-blue-200 text-center">
+                    <p className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">20%</p>
+                    <p className="text-xs sm:text-sm text-gray-600 mb-3">Reduction</p>
+                    <p className="text-xl sm:text-2xl font-bold text-slate-900">
                       ${recoveredRevenue20.toLocaleString()}
                     </p>
                   </div>
@@ -841,7 +841,7 @@ export default function Land2() {
             </div>
             
             {/* Transition to CTA */}
-            <div className="text-center max-w-2xl mx-auto mb-12">
+            <div className="text-center max-w-2xl mx-auto mb-12 w-full px-2">
                 <h3 className="text-2xl font-bold text-slate-900 mb-6">
                   Stability Must Be Engineered — Not Assumed.
                 </h3>
@@ -857,7 +857,7 @@ export default function Land2() {
                 
                 <button
                   onClick={() => setIsSummaryModalOpen(true)}
-                  className="inline-block bg-blue-600 text-white px-12 py-5 rounded-lg font-bold hover:bg-blue-700 text-xl shadow-2xl transition-colors"
+                  className="inline-block bg-blue-600 text-white px-6 sm:px-8 md:px-12 py-4 sm:py-5 rounded-lg font-bold hover:bg-blue-700 text-base sm:text-lg md:text-xl shadow-2xl transition-colors"
                 >
                   Send Me My Executive Exposure Summary
                 </button>
@@ -870,8 +870,8 @@ export default function Land2() {
       <div className="h-px bg-gray-200"></div>
 
       {/* COMPETITIVE POSITIONING SECTION */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white w-full">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 w-full">
           <h2 className="text-3xl sm:text-4xl md:text-[36px] font-bold text-slate-900 mb-8 text-center tracking-tight">
             The Clinics That Win the Next Phase
           </h2>
@@ -886,7 +886,7 @@ export default function Land2() {
           </div>
           
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
-            <div className="bg-white p-8 rounded-2xl border-2 border-blue-200 shadow-md">
+            <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-200 shadow-md">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Target className="w-6 h-6 text-blue-600" />
@@ -898,7 +898,7 @@ export default function Land2() {
               </div>
             </div>
             
-            <div className="bg-white p-8 rounded-2xl border-2 border-blue-200 shadow-md">
+            <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-200 shadow-md">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <DollarSign className="w-6 h-6 text-blue-600" />
@@ -910,7 +910,7 @@ export default function Land2() {
               </div>
             </div>
             
-            <div className="bg-white p-8 rounded-2xl border-2 border-blue-200 shadow-md">
+            <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-200 shadow-md">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Users className="w-6 h-6 text-blue-600" />
@@ -922,7 +922,7 @@ export default function Land2() {
               </div>
             </div>
             
-            <div className="bg-white p-8 rounded-2xl border-2 border-blue-200 shadow-md">
+            <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-blue-200 shadow-md">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <CheckCircle className="w-6 h-6 text-blue-600" />
