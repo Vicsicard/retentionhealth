@@ -2,11 +2,9 @@
 
 import { useState } from 'react';
 import { TrendingDown, AlertTriangle, Users, DollarSign, Target, CheckCircle, XCircle } from 'lucide-react';
-import PilotModal from '@/components/PilotModal';
 import ExecutiveSummaryModal from '@/components/ExecutiveSummaryModal';
 
 export default function Land2() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSummaryModalOpen, setIsSummaryModalOpen] = useState(false);
   
   const [patientsPerMonth, setPatientsPerMonth] = useState<number>(100);
@@ -34,8 +32,6 @@ export default function Land2() {
 
   return (
     <div className="bg-white overflow-x-hidden w-full">
-      <PilotModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-      
       {/* SECTION 1 — HERO */}
       <section className="bg-gradient-to-b from-white to-gray-50 py-12 sm:py-16 md:py-24 w-full">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full">
@@ -993,13 +989,13 @@ export default function Land2() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => setIsSummaryModalOpen(true)}
               className="inline-block bg-white text-blue-600 px-12 py-5 rounded-lg font-bold hover:bg-gray-100 text-xl shadow-2xl"
             >
               Stabilize My Early Window
             </button>
             <button
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => setIsSummaryModalOpen(true)}
               className="inline-block bg-blue-700 text-white px-12 py-5 rounded-lg font-bold hover:bg-blue-800 text-xl border-2 border-white shadow-2xl"
             >
               Schedule Executive Review
@@ -1010,8 +1006,6 @@ export default function Land2() {
 
       <div className="h-1 bg-gradient-to-r from-teal-500 via-blue-500 to-teal-500"></div>
 
-      <PilotModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-      
       <ExecutiveSummaryModal 
         isOpen={isSummaryModalOpen} 
         onClose={() => setIsSummaryModalOpen(false)}
