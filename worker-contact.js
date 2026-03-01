@@ -1,8 +1,8 @@
 addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request));
+  event.respondWith(handleRequest(event.request, event.env));
 });
 
-async function handleRequest(request) {
+async function handleRequest(request, env) {
   // Handle CORS preflight
   if (request.method === 'OPTIONS') {
     return new Response(null, {
@@ -33,8 +33,8 @@ async function handleRequest(request) {
       });
     }
 
-    const SENDGRID_API_KEY = SENDGRID_API_KEY_ENV;
-    const NOTIFICATION_EMAIL = NOTIFICATION_EMAIL_ENV || 'contact@retentionhealth.com';
+    const SENDGRID_API_KEY = env.SENDGRID_API_KEY;
+    const NOTIFICATION_EMAIL = env.NOTIFICATION_EMAIL || 'contact@retentionhealth.com';
 
     // Email to you (notification)
     const emailData = {
