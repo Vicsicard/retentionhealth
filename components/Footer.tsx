@@ -25,11 +25,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/pilot" className="text-sm text-gray-600 hover:text-gray-900">
-                  Pilot Program
-                </Link>
-              </li>
-              <li>
                 <Link href="/security" className="text-sm text-gray-600 hover:text-gray-900">
                   Security
                 </Link>

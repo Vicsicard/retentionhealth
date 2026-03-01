@@ -2,12 +2,10 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import PilotModal from './PilotModal';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,10 +17,7 @@ export default function Header() {
   }, []);
 
   return (
-    <>
-      <PilotModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-      
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className={`max-w-6xl mx-auto px-4 sm:px-6 ${isScrolled ? 'pt-4 pb-3' : 'pt-6 pb-4'}`}>
           <div className="flex justify-between items-center">
             <Link href="/" className="flex items-center">
@@ -34,14 +29,6 @@ export default function Header() {
             
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
-              {isScrolled && (
-                <button
-                  onClick={() => setIsModalOpen(true)}
-                  className="bg-blue-600 text-white px-5 py-2 rounded font-semibold hover:bg-blue-700"
-                >
-                  Request Pilot Discussion
-                </button>
-              )}
             <a href="/#problem" className="text-gray-600 hover:text-gray-900">
               How It Helps
             </a>
@@ -50,9 +37,6 @@ export default function Header() {
             </a>
             <a href="/#solution" className="text-gray-600 hover:text-gray-900">
               Solution
-            </a>
-            <a href="/#pilot" className="text-gray-600 hover:text-gray-900">
-              Pilot
             </a>
             <Link href="/about" className="text-gray-600 hover:text-gray-900">
               About
@@ -109,13 +93,6 @@ export default function Header() {
               >
                 Solution
               </a>
-              <a 
-                href="/#pilot" 
-                className="text-gray-600 hover:text-gray-900 py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Pilot
-              </a>
               <Link 
                 href="/about" 
                 className="text-gray-600 hover:text-gray-900 py-2"
@@ -141,6 +118,5 @@ export default function Header() {
         )}
       </div>
     </header>
-    </>
   );
 }
