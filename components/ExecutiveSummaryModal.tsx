@@ -29,7 +29,7 @@ export default function ExecutiveSummaryModal({ isOpen, onClose, calculatorData 
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('https://retentionhealth-executive-summary.vicsicard.workers.dev', {
+      const response = await fetch('https://hidden-sunset-a7b4retentionhealth-executive-summary.vic-76c.workers.dev', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
