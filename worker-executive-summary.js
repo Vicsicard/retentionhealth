@@ -29,6 +29,8 @@ export default {
         name,
         email,
         calculatorData,
+        schedulingPreferences,
+        timezone,
         source,
         timestamp,
       } = data;
@@ -99,6 +101,16 @@ export default {
               <li><strong>Source:</strong> ${source || 'land2'}</li>
               <li><strong>Timestamp:</strong> ${timestamp || new Date().toISOString()}</li>
             </ul>
+            
+            ${schedulingPreferences && schedulingPreferences.length > 0 ? `
+            <h3>Scheduling Preferences</h3>
+            <p><strong>Timezone:</strong> ${timezone || 'Not specified'}</p>
+            <ul>
+              ${schedulingPreferences.map((pref, idx) => `
+                <li><strong>${idx === 0 ? '1st Choice' : idx === 1 ? '2nd Choice' : '3rd Choice'}:</strong> ${pref.date} at ${pref.time}</li>
+              `).join('')}
+            </ul>
+            ` : '<p><em>No scheduling preferences provided</em></p>'}
             
             ${calculatorData ? `
             <h3>Exposure Analysis</h3>
