@@ -1,0 +1,6 @@
+name = "retentionhealth-executive-summary"
+main = "worker-executive-summary.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+# Environment variables will be set in Cloudflare dashboard
