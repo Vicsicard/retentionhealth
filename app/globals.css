@@ -24,3 +24,145 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* RetentionHealth Component Styles */
+.btn-primary {
+  background-color: rgb(37 99 235);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: rgb(29 78 216);
+}
+
+.btn-primary:disabled {
+  background-color: rgb(209 213 219);
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: rgb(37 99 235);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  border: 2px solid rgb(37 99 235);
+  transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: rgb(249 250 251);
+}
+
+.btn-option {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid rgb(229 231 235);
+  border-radius: 0.5rem;
+  text-align: left;
+  transition: all 0.15s;
+  background-color: white;
+}
+
+.btn-option:hover {
+  border-color: rgb(147 197 253);
+  background-color: rgb(239 246 255);
+}
+
+.btn-option:active {
+  transform: scale(0.95);
+}
+
+.btn-option:disabled {
+  opacity: 0.5;
+}
+
+.input {
+  width: 100%;
+  border: 2px solid rgb(209 213 219);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgb(59 130 246);
+  border-color: rgb(59 130 246);
+}
+
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  border: 2px solid rgb(229 231 235);
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.brand-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(37 99 235);
+  margin-bottom: 0.5rem;
+}
+
+.heading-lg {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: rgb(15 23 42);
+  letter-spacing: -0.025em;
+  margin-bottom: 0.5rem;
+}
+
+.text-body {
+  font-size: 1rem;
+  color: rgb(107 114 128);
+  line-height: 1.5;
+}
+
+.phase-indicator {
+  font-size: 0.875rem;
+  color: rgb(107 114 128);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.focus-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: rgb(55 65 81);
+}
+
+.focus-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.focus-list li::before {
+  content: "•";
+  margin-right: 0.5rem;
+  color: rgb(156 163 175);
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .heading-lg {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .heading-lg {
+    font-size: 2.25rem;
+  }
+}

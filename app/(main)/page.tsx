@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import PilotNav from "@/components/PilotNav";
-import Footer from "@/components/Footer";
 import PilotApplicationModal from "@/components/PilotApplicationModal";
 import { MessageSquare, RefreshCw, AlertTriangle, Target, CheckCircle, Users, DollarSign } from "lucide-react";
 
@@ -679,8 +678,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }
