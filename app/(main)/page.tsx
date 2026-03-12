@@ -4,7 +4,7 @@ import { useState } from "react";
 import PilotNav from "@/components/PilotNav";
 import Footer from "@/components/Footer";
 import PilotApplicationModal from "@/components/PilotApplicationModal";
-import { TrendingDown, MessageSquare, RefreshCw, AlertTriangle, Target, CheckCircle, Users, DollarSign } from "lucide-react";
+import { MessageSquare, RefreshCw, AlertTriangle, Target, CheckCircle, Users, DollarSign } from "lucide-react";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,7 +15,7 @@ export default function Home() {
       <PilotNav />
       
       {/* HERO */}
-      <section className="bg-gradient-to-b from-white to-gray-50 pt-32 pb-20 px-4 sm:px-6">
+      <section className="bg-gradient-to-b from-white to-gray-50 pt-20 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
             Stabilize Patients During Treatment Ramp-Up — Measurably.
@@ -72,10 +72,10 @@ export default function Home() {
       {/* PROBLEM */}
       <section className="py-20 bg-white px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-slate-900 mb-6 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 text-center">
             The First 60 Days Determine Everything.
           </h2>
-          <p className="text-xl text-gray-600 mb-16 text-center max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 mb-12 sm:mb-16 text-center max-w-3xl mx-auto">
             Most GLP-1 programs experience the highest patient drop-off within the first 8 weeks.
           </p>
           
@@ -132,11 +132,11 @@ export default function Home() {
       {/* ECONOMIC IMPACT */}
       <section id="economic-impact" className="py-20 bg-gradient-to-b from-gray-50 to-white px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 mb-16 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 sm:mb-16 text-center">
             Even Modest Retention Improvement Has Meaningful Revenue Impact
           </h2>
           
-          <div className="max-w-3xl mx-auto bg-gradient-to-br from-blue-50 to-teal-50 p-12 rounded-2xl border-2 border-blue-200 shadow-lg">
+          <div className="max-w-3xl mx-auto bg-gradient-to-br from-blue-50 to-teal-50 p-6 sm:p-8 md:p-12 rounded-2xl border-2 border-blue-200 shadow-lg">
             <div className="text-center mb-8">
               <p className="text-lg text-gray-700 mb-8">Example scenario:</p>
               <div className="space-y-3 text-left max-w-md mx-auto mb-10">
@@ -155,10 +155,10 @@ export default function Home() {
               </div>
               
               <div className="border-t-2 border-blue-200 pt-8">
-                <p className="text-xl font-semibold text-gray-900 mb-4">
+                <p className="text-lg sm:text-xl font-semibold text-gray-900 mb-4">
                   A 10% reduction in drop-off retains 12 patients and protects:
                 </p>
-                <p className="text-5xl font-bold text-blue-600 mb-2">
+                <p className="text-4xl sm:text-5xl font-bold text-blue-600 mb-2">
                   $7,200
                 </p>
                 <p className="text-lg text-gray-700 mb-2">preserved monthly revenue</p>
@@ -188,10 +188,10 @@ export default function Home() {
       {/* WHAT IT DOES */}
       <section className="py-20 bg-white px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-slate-900 mb-6 text-center">
-            This Is Not Software. It's Measured Stabilization.
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 text-center">
+            This Is Not Software. It&apos;s Measured Stabilization.
           </h2>
-          <p className="text-xl text-gray-600 mb-16 text-center max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 mb-12 sm:mb-16 text-center max-w-3xl mx-auto">
             The pilot introduces a structured behavioral reinforcement layer that operates alongside your existing workflow.
           </p>
 
@@ -265,19 +265,19 @@ export default function Home() {
           </h2>
 
           <div className="space-y-12 max-w-3xl mx-auto">
-            <div className="flex gap-6">
+            <div className="flex gap-4 sm:gap-6">
               <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">
                 1
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-3">Side-by-Side Patient Groups</h3>
-                <p className="text-gray-700 text-lg mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3">Side-by-Side Patient Groups</h3>
+                <p className="text-gray-700 text-base sm:text-lg mb-4">
                   You track two patient groups simultaneously.
                 </p>
                 
                 <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-3">
                   <p className="font-semibold text-slate-900 mb-2">Existing Workflow Group</p>
-                  <p className="text-gray-700">Patients receive your clinic's normal onboarding and follow-up process.</p>
+                  <p className="text-gray-700">Patients receive your clinic&apos;s normal onboarding and follow-up process.</p>
                   <p className="text-gray-600 text-sm mt-1 italic">No changes to your current operations.</p>
                 </div>
                 
@@ -361,10 +361,10 @@ export default function Home() {
       {/* PILOT TIMELINE */}
       <section className="py-20 bg-white px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-slate-900 mb-6 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 text-center">
             What the 8-Week Pilot Actually Looks Like
           </h2>
-          <p className="text-xl text-gray-700 mb-4 text-center">
+          <p className="text-lg sm:text-xl text-gray-700 mb-4 text-center">
             The pilot is intentionally lightweight.
           </p>
           <p className="text-xl text-gray-700 mb-16 text-center">
@@ -460,7 +460,7 @@ export default function Home() {
       {/* COMPLIANCE & DATA DESIGN */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-slate-900 mb-16 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-12 sm:mb-16 text-center">
             Compliance & Data Design
           </h2>
 
@@ -508,7 +508,7 @@ export default function Home() {
       {/* FOUNDER STRUCTURE */}
       <section id="founder-terms" className="py-20 bg-white px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-slate-900 mb-6 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 text-center">
             Founder Revenue Share Model
           </h2>
           <p className="text-xl text-gray-600 mb-4 text-center">
@@ -524,7 +524,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto bg-gradient-to-br from-blue-50 to-teal-50 p-10 rounded-2xl border-2 border-blue-200 shadow-lg mb-8">
+          <div className="max-w-3xl mx-auto bg-gradient-to-br from-blue-50 to-teal-50 p-6 sm:p-8 md:p-10 rounded-2xl border-2 border-blue-200 shadow-lg mb-8">
             <p className="text-lg text-gray-700 mb-8">
               If measurable stabilization is demonstrated at Week 8, participating clinics may convert to permanent integration under Founder terms.
             </p>
@@ -566,7 +566,7 @@ export default function Home() {
       {/* IDEAL PROFILE */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-slate-900 mb-16 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-12 sm:mb-16 text-center">
             Ideal Clinic Profile
           </h2>
 
@@ -648,7 +648,7 @@ export default function Home() {
       {/* APPLY FORM */}
       <section id="apply" className="py-20 bg-white px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold text-slate-900 mb-6 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 text-center">
             Apply for the Pilot Cohort
           </h2>
 

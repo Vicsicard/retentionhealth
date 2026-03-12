@@ -100,11 +100,11 @@ export default function PilotApplicationModal({ isOpen, onClose }: PilotApplicat
         />
         
         {/* Modal */}
-        <div className="relative bg-white rounded-xl shadow-2xl max-w-lg w-full p-8">
+        <div className="relative bg-white rounded-xl shadow-2xl max-w-lg w-full p-6 sm:p-8">
           {/* Close button */}
           <button
             onClick={handleClose}
-            className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+            className="absolute top-3 right-3 sm:top-4 sm:right-4 text-gray-400 hover:text-gray-600 p-1"
             aria-label="Close"
           >
             <X className="w-6 h-6" />
@@ -113,8 +113,8 @@ export default function PilotApplicationModal({ isOpen, onClose }: PilotApplicat
           {!isSubmitted ? (
             <>
               {/* Header */}
-              <div className="mb-8">
-                <h2 className="text-2xl font-bold text-slate-900 mb-2">
+              <div className="mb-6 sm:mb-8">
+                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2">
                   RetentionHealth Pilot Application
                 </h2>
                 <p className="text-sm text-gray-600">
@@ -123,7 +123,7 @@ export default function PilotApplicationModal({ isOpen, onClose }: PilotApplicat
               </div>
 
               {/* Progress indicator */}
-              <div className="mb-8">
+              <div className="mb-6 sm:mb-8">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-semibold text-slate-800">
                     Step {screen} of 5
@@ -141,7 +141,7 @@ export default function PilotApplicationModal({ isOpen, onClose }: PilotApplicat
               {/* Screen 1: Clinic Structure */}
               {screen === 1 && (
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-6">
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 sm:mb-6">
                     What best describes your clinic?
                   </h3>
 
@@ -171,7 +171,7 @@ export default function PilotApplicationModal({ isOpen, onClose }: PilotApplicat
               {/* Screen 2: Active Patients */}
               {screen === 2 && (
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-6">
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 sm:mb-6">
                     How many active GLP-1 patients does your clinic currently manage?
                   </h3>
 
@@ -208,7 +208,7 @@ export default function PilotApplicationModal({ isOpen, onClose }: PilotApplicat
               {/* Screen 3: Treatment Delivery */}
               {screen === 3 && (
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-6">
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 sm:mb-6">
                     How are treatments primarily delivered to patients?
                   </h3>
 
@@ -245,7 +245,7 @@ export default function PilotApplicationModal({ isOpen, onClose }: PilotApplicat
               {/* Screen 4: Pilot Commitment */}
               {screen === 4 && (
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-3 sm:mb-4">
                     The pilot requires ~5 minutes of weekly reporting for 8 weeks.
                   </h3>
                   <p className="text-gray-600 mb-6">
@@ -284,7 +284,7 @@ export default function PilotApplicationModal({ isOpen, onClose }: PilotApplicat
               {/* Screen 5: Contact Details */}
               {screen === 5 && (
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-6">
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 sm:mb-6">
                     Contact Details
                   </h3>
 
@@ -356,10 +356,10 @@ export default function PilotApplicationModal({ isOpen, onClose }: PilotApplicat
                     </div>
                   </div>
 
-                  <div className="flex gap-3 mt-8">
+                  <div className="flex flex-col sm:flex-row gap-3 mt-6 sm:mt-8">
                     <button
                       onClick={handleBack}
-                      className="flex items-center gap-2 px-6 py-4 text-gray-600 hover:text-gray-900 font-semibold"
+                      className="flex items-center justify-center gap-2 px-6 py-3 sm:py-4 text-gray-600 hover:text-gray-900 font-semibold border border-gray-300 rounded-lg sm:border-0"
                     >
                       <ChevronLeft className="w-5 h-5" />
                       Back
@@ -367,7 +367,7 @@ export default function PilotApplicationModal({ isOpen, onClose }: PilotApplicat
                     <button
                       onClick={handleSubmit}
                       disabled={!data.clinicName || !data.contactName || !data.email || !data.phone || isSubmitting}
-                      className="flex-1 bg-blue-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
+                      className="flex-1 bg-blue-600 text-white px-6 py-3 sm:py-4 rounded-lg font-semibold hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
                     >
                       {isSubmitting ? 'Submitting...' : 'Submit Application'}
                     </button>
@@ -377,11 +377,11 @@ export default function PilotApplicationModal({ isOpen, onClose }: PilotApplicat
             </>
           ) : (
             /* Success Screen */
-            <div className="text-center py-8">
+            <div className="text-center py-6 sm:py-8">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="w-10 h-10 text-green-600" />
               </div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4">
                 Application Received
               </h2>
               <p className="text-lg text-gray-700 mb-2">
