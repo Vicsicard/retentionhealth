@@ -1,77 +1,92 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { TrendingDown, MessageSquare, RefreshCw, AlertTriangle, Target, TrendingUp, Utensils, Users, Zap, DollarSign, CheckCircle, XCircle } from 'lucide-react';
-import PilotModal from '@/components/PilotModal';
+import { useState } from "react";
+import PilotNav from "@/components/PilotNav";
+import Footer from "@/components/Footer";
+import PilotApplicationModal from "@/components/PilotApplicationModal";
+import { TrendingDown, MessageSquare, RefreshCw, AlertTriangle, Target, CheckCircle, Users, DollarSign } from "lucide-react";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="bg-white">
-      <PilotModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <PilotApplicationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <PilotNav />
       
       {/* HERO */}
-      <section className="bg-gradient-to-b from-white to-gray-50 py-12 sm:py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div>
-              <h1 className="text-4xl sm:text-5xl md:text-[56px] font-bold text-slate-900 mb-6 sm:mb-8 leading-tight tracking-tight">
-                Reduce GLP-1 Month-1 Drop-Off.
-              </h1>
-              <p className="text-lg sm:text-xl text-gray-700 mb-4 sm:mb-6 leading-relaxed">
-                Built for GLP-1 subscription programs that want to stabilize early retention.
-              </p>
-              <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-10">
-                Retention infrastructure for clinics managing 300+ active patients.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  onClick={() => setIsModalOpen(true)}
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 text-lg shadow-md text-center"
-                >
-                  Request Pilot Discussion
-                </button>
-                <a 
-                  href="#revenue"
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 text-lg border-2 border-blue-600 text-center"
-                >
-                  View Revenue Impact
-                </a>
-              </div>
-            </div>
-            
-            <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-gray-200 shadow-lg">
-              <img 
-                src="/patient drop.png" 
-                alt="GLP-1 patient retention pattern showing rapid drop-off after first injection vs. stabilized retention with $215K+ ARR protected"
-                className="w-full h-auto"
-              />
-            </div>
+      <section className="bg-gradient-to-b from-white to-gray-50 pt-32 pb-20 px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+            Stabilize Patients During Treatment Ramp-Up — Measurably.
+          </h1>
+          <p className="text-xl sm:text-2xl text-gray-700 mb-2">
+            Validated for GLP-1 programs.
+          </p>
+          <p className="text-xl sm:text-2xl text-gray-700 mb-4">
+            8-week stabilization pilot for owner-led clinics.
+          </p>
+          <p className="text-lg text-gray-600 mb-4">
+            No EMR integration. No workflow disruption.
+          </p>
+          <p className="text-lg text-gray-600 mb-4">
+            No Protected Health Information (PHI) collected or stored during pilot.
+          </p>
+          <p className="text-lg text-gray-600 mb-4">
+            Because the pilot does not collect Protected Health Information (PHI), a Business Associate Agreement (BAA) is not required during pilot participation.
+          </p>
+          <p className="text-base text-gray-500 mb-10">
+            Structured retention validation for GLP-1 programs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#apply"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 text-lg shadow-md"
+            >
+              Apply for Pilot
+            </a>
           </div>
+          <p className="text-sm text-gray-500 mt-6">Limited to 6 owner-led clinics.</p>
         </div>
       </section>
 
       <div className="h-px bg-gray-200"></div>
 
-      {/* PATTERN RECOGNITION - OPERATORS KNOW THIS */}
-      <section id="problem" className="py-12 sm:py-16 md:py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl sm:text-4xl md:text-[36px] font-bold text-slate-900 mb-6 text-center tracking-tight">
-            Operators Know This Pattern
+      {/* MARKET CONTEXT */}
+      <section className="py-16 bg-white px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+            The Market Context
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 mb-12 sm:mb-16 text-center max-w-2xl mx-auto">
-            Month one instability is operational, not clinical.
+          <p className="text-lg text-gray-700 mb-4 text-center">
+            GLP-1 therapies now serve <strong>15M+ patients</strong> in the United States, across <strong>75,000–125,000</strong> medical weight-loss and longevity clinics.
+          </p>
+          <p className="text-lg text-gray-700 text-center">
+            Early-phase patient instability is emerging as one of the most common operational challenges during treatment ramp-up.
+          </p>
+        </div>
+      </section>
+
+      <div className="h-px bg-gray-200"></div>
+
+      {/* PROBLEM */}
+      <section className="py-20 bg-white px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-bold text-slate-900 mb-6 text-center">
+            The First 60 Days Determine Everything.
+          </h2>
+          <p className="text-xl text-gray-600 mb-16 text-center max-w-3xl mx-auto">
+            Most GLP-1 programs experience the highest patient drop-off within the first 8 weeks.
           </p>
           
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
             <div className="flex gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                <TrendingDown className="w-6 h-6 text-blue-600" />
+                <DollarSign className="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <h3 className="font-bold text-slate-800 text-xl mb-2">Appetite volatility after injection</h3>
-                <p className="text-gray-600">Patients unsure what to eat during suppression phases</p>
+                <h3 className="font-bold text-slate-800 text-xl mb-2">Revenue volatility</h3>
+                <p className="text-gray-600">Unpredictable monthly recurring revenue (MRR)</p>
               </div>
             </div>
             
@@ -80,7 +95,7 @@ export default function Home() {
                 <MessageSquare className="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <h3 className="font-bold text-slate-800 text-xl mb-2">Support inbox spikes</h3>
+                <h3 className="font-bold text-slate-800 text-xl mb-2">Increased support load</h3>
                 <p className="text-gray-600">Food-related questions during dose escalation</p>
               </div>
             </div>
@@ -90,8 +105,8 @@ export default function Home() {
                 <RefreshCw className="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <h3 className="font-bold text-slate-800 text-xl mb-2">Nausea uncertainty</h3>
-                <p className="text-gray-600">Patients struggle with protein intake during peaks</p>
+                <h3 className="font-bold text-slate-800 text-xl mb-2">Reactive staff workflows</h3>
+                <p className="text-gray-600">Constant firefighting instead of structured support</p>
               </div>
             </div>
             
@@ -100,23 +115,23 @@ export default function Home() {
                 <AlertTriangle className="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <h3 className="font-bold text-slate-800 text-xl mb-2">Early drop-off before month two</h3>
-                <p className="text-gray-600">Cancellations during the highest churn window</p>
+                <h3 className="font-bold text-slate-800 text-xl mb-2">Unpredictable refill timing</h3>
+                <p className="text-gray-600">Inventory and cash flow planning challenges</p>
               </div>
             </div>
           </div>
-          
-          <p className="text-center text-xl text-slate-900 font-bold mt-20 max-w-2xl mx-auto">
-            Avoidable churn compounds across every new cohort you enroll.
+
+          <p className="text-center text-xl text-slate-900 font-bold mt-12">
+            Stopping early churn has a disproportionately large impact on patient lifetime value.
           </p>
         </div>
       </section>
 
       <div className="h-px bg-gray-200"></div>
 
-      {/* REVENUE IMPACT */}
-      <section id="revenue" className="py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-5xl mx-auto px-6">
+      {/* ECONOMIC IMPACT */}
+      <section id="economic-impact" className="py-20 bg-gradient-to-b from-gray-50 to-white px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl font-bold text-gray-900 mb-16 text-center">
             Even Modest Retention Improvement Has Meaningful Revenue Impact
           </h2>
@@ -127,381 +142,545 @@ export default function Home() {
               <div className="space-y-3 text-left max-w-md mx-auto mb-10">
                 <div className="flex justify-between text-lg">
                   <span className="text-gray-700">Active GLP-1 patients:</span>
-                  <span className="font-semibold text-gray-900">1,500</span>
+                  <span className="font-semibold text-gray-900">120</span>
                 </div>
                 <div className="flex justify-between text-lg">
                   <span className="text-gray-700">Average monthly fee:</span>
-                  <span className="font-semibold text-gray-900">$399</span>
+                  <span className="font-semibold text-gray-900">$600</span>
                 </div>
                 <div className="flex justify-between text-lg">
-                  <span className="text-gray-700">Month-one drop-off:</span>
-                  <span className="font-semibold text-gray-900">12%</span>
+                  <span className="text-gray-700">Baseline drop-off:</span>
+                  <span className="font-semibold text-gray-900">30%</span>
                 </div>
               </div>
               
               <div className="border-t-2 border-blue-200 pt-8">
                 <p className="text-xl font-semibold text-gray-900 mb-4">
-                  A 3% retention improvement protects:
+                  A 10% reduction in drop-off retains 12 patients and protects:
                 </p>
-                <p className="text-5xl font-bold text-blue-600 mb-4">
-                  $200,000+
+                <p className="text-5xl font-bold text-blue-600 mb-2">
+                  $7,200
                 </p>
-                <p className="text-lg text-gray-700">in annual recurring revenue</p>
+                <p className="text-lg text-gray-700 mb-2">preserved monthly revenue</p>
+                <p className="text-base text-gray-600 mb-8">
+                  Equivalent to approximately <strong>$86,400</strong> in annualized patient value.
+                </p>
+                
+                <div className="bg-white p-6 rounded-lg border border-blue-200">
+                  <p className="text-lg font-semibold text-gray-900 mb-3">
+                    $7,200 preserved.<br />
+                    $500 pilot participation.
+                  </p>
+                  <p className="text-gray-700 mb-2">Founder pilot rate: <span className="font-bold text-gray-900">$500/month</span></p>
+                  <p className="text-sm text-gray-600 mt-4 italic">
+                    Conservative example for illustration purposes.<br />
+                    Results vary by clinic size and engagement.
+                  </p>
+                </div>
               </div>
             </div>
-            <p className="text-sm text-gray-500 italic text-center">
-              Modeled example. Impact varies by program.
+          </div>
+        </div>
+      </section>
+
+      <div className="h-px bg-gray-200"></div>
+
+      {/* WHAT IT DOES */}
+      <section className="py-20 bg-white px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-bold text-slate-900 mb-6 text-center">
+            This Is Not Software. It's Measured Stabilization.
+          </h2>
+          <p className="text-xl text-gray-600 mb-16 text-center max-w-3xl mx-auto">
+            The pilot introduces a structured behavioral reinforcement layer that operates alongside your existing workflow.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <div>
+              <h3 className="text-2xl font-bold text-red-600 mb-6">It Does NOT:</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <span className="text-red-600 mt-1">✗</span>
+                  <span className="text-gray-700">Prescribe</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-600 mt-1">✗</span>
+                  <span className="text-gray-700">Diagnose</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-600 mt-1">✗</span>
+                  <span className="text-gray-700">Change dosing</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-600 mt-1">✗</span>
+                  <span className="text-gray-700">Replace your EMR</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-600 mt-1">✗</span>
+                  <span className="text-gray-700">Collect or store Protected Health Information (PHI)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-bold text-green-600 mb-6">It DOES:</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Compare existing workflow vs reinforced patient groups</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Measure engagement trends between groups</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Monitor refill timing volatility</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Quantify drop-off delta</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Deliver weekly executive summaries</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <p className="text-center text-xl text-slate-900 font-bold mt-16">
+            All results are measured against your existing workflow baseline.
+          </p>
+        </div>
+      </section>
+
+      <div className="h-px bg-gray-200"></div>
+
+      {/* HOW IT WORKS */}
+      <section id="how-it-works" className="py-20 bg-gradient-to-b from-gray-50 to-white px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-bold text-slate-900 mb-16 text-center">
+            How the Pilot Works
+          </h2>
+
+          <div className="space-y-12 max-w-3xl mx-auto">
+            <div className="flex gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">
+                1
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">Side-by-Side Patient Groups</h3>
+                <p className="text-gray-700 text-lg mb-4">
+                  You track two patient groups simultaneously.
+                </p>
+                
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-3">
+                  <p className="font-semibold text-slate-900 mb-2">Existing Workflow Group</p>
+                  <p className="text-gray-700">Patients receive your clinic's normal onboarding and follow-up process.</p>
+                  <p className="text-gray-600 text-sm mt-1 italic">No changes to your current operations.</p>
+                </div>
+                
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <p className="font-semibold text-slate-900 mb-2">Stabilization Group</p>
+                  <p className="text-gray-700 mb-2">Patients receive access to the RetentionHealth behavioral guidance interface designed to support the treatment ramp-up phase.</p>
+                  <p className="text-gray-600 text-sm italic">Delivered via a secure SMS link — no app download required.</p>
+                </div>
+                
+                <p className="text-gray-700 text-lg mt-4">
+                  The pilot measures whether the stabilization layer improves retention and reduces support burden compared to your existing workflow.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">
+                2
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">Weekly Measurement</h3>
+                <p className="text-gray-700 text-lg mb-3">You submit simple weekly metrics:</p>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <li>Engagement rate</li>
+                  <li>Volatility events</li>
+                  <li>Refill timing variance</li>
+                  <li>60-day drop-off</li>
+                </ul>
+                <p className="text-sm text-gray-600 italic mt-4">
+                  Submission takes approximately 5 minutes per week.
+                </p>
+                <p className="text-sm text-gray-600 mt-2">
+                  No patient identifiers are submitted. Clinics report simple aggregated counts.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">
+                3
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">Monday Executive Summary</h3>
+                <p className="text-gray-700 text-lg mb-3">You receive:</p>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <li>Side-by-side comparison</li>
+                  <li>Operational insights</li>
+                  <li>Measured stabilization impact</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="flex gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">
+                4
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">Week 8 Validation Review</h3>
+                <p className="text-gray-700 text-lg mb-3">We quantify:</p>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <li>Drop-off reduction</li>
+                  <li>Revenue preserved</li>
+                  <li>Operational stability gains</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-16 text-center">
+            <div className="inline-block bg-blue-50 border-2 border-blue-200 rounded-lg p-6">
+              <p className="text-lg font-semibold text-slate-900">
+                All results are measured against your existing workflow baseline.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="h-px bg-gray-200"></div>
+
+      {/* PILOT TIMELINE */}
+      <section className="py-20 bg-white px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-bold text-slate-900 mb-6 text-center">
+            What the 8-Week Pilot Actually Looks Like
+          </h2>
+          <p className="text-xl text-gray-700 mb-4 text-center">
+            The pilot is intentionally lightweight.
+          </p>
+          <p className="text-xl text-gray-700 mb-16 text-center">
+            Most clinics spend less than 10 minutes per week participating.
+          </p>
+
+          <div className="max-w-3xl mx-auto space-y-6">
+            {/* Week 0 */}
+            <div className="border-l-4 border-blue-600 bg-gray-50 p-6 rounded-r-lg">
+              <h3 className="font-bold text-slate-900 text-xl mb-3">
+                Week 0 — Setup (≈15 minutes)
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Clinic receives pilot onboarding link and demo credentials.
+              </p>
+              <p className="text-gray-700 mb-3">
+                You assign patients to two groups using your existing workflow:
+              </p>
+              <ul className="list-disc list-inside space-y-1 text-gray-700 mb-3 ml-4">
+                <li>Existing workflow group</li>
+                <li>Stabilization group</li>
+              </ul>
+              <p className="text-gray-600 text-sm">
+                No EMR integration. No workflow changes required.
+              </p>
+            </div>
+
+            {/* Weeks 1-2 */}
+            <div className="border-l-4 border-blue-600 bg-gray-50 p-6 rounded-r-lg">
+              <h3 className="font-bold text-slate-900 text-xl mb-3">
+                Weeks 1–2 — Initial Ramp-Up
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Patients begin treatment ramp-up.
+              </p>
+              <p className="text-gray-700">
+                Patients in the stabilization group receive structured behavioral guidance via secure SMS link.
+              </p>
+            </div>
+
+            {/* Weeks 3-6 */}
+            <div className="border-l-4 border-blue-600 bg-gray-50 p-6 rounded-r-lg">
+              <h3 className="font-bold text-slate-900 text-xl mb-3">
+                Weeks 3–6 — Stabilization Monitoring
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Clinics submit simple weekly metrics (~5 minutes):
+              </p>
+              <ul className="list-disc list-inside space-y-1 text-gray-700 mb-3 ml-4">
+                <li>engagement trends</li>
+                <li>refill timing patterns</li>
+                <li>support load indicators</li>
+                <li>early retention signals</li>
+              </ul>
+              <p className="text-gray-600 text-sm">
+                No patient identifiers are submitted. Clinics report simple aggregated counts.
+              </p>
+            </div>
+
+            {/* Week 7 */}
+            <div className="border-l-4 border-blue-600 bg-gray-50 p-6 rounded-r-lg">
+              <h3 className="font-bold text-slate-900 text-xl mb-3">
+                Week 7 — Data Consolidation
+              </h3>
+              <p className="text-gray-700">
+                RetentionHealth compiles cohort comparison data and operational trends.
+              </p>
+            </div>
+
+            {/* Week 8 */}
+            <div className="border-l-4 border-blue-600 bg-gray-50 p-6 rounded-r-lg">
+              <h3 className="font-bold text-slate-900 text-xl mb-3">
+                Week 8 — Validation Review
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Clinics receive a full executive summary including:
+              </p>
+              <ul className="list-disc list-inside space-y-1 text-gray-700 mb-3 ml-4">
+                <li>retention comparison</li>
+                <li>estimated revenue preserved</li>
+                <li>operational insights</li>
+              </ul>
+              <p className="text-gray-700">
+                Clinics then decide whether to continue into the full production platform.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="h-px bg-gray-200"></div>
+
+      {/* COMPLIANCE & DATA DESIGN */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-bold text-slate-900 mb-16 text-center">
+            Compliance & Data Design
+          </h2>
+
+          <div className="max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 mb-8">
+              The 8-week pilot is intentionally structured to avoid handling Protected Health Information (PHI).
             </p>
-          </div>
-          
-          <div className="text-center mt-12">
-            <a 
-              href="#solution"
-              className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 text-lg shadow-md"
-            >
-              See How It Works
-            </a>
-          </div>
-          
-          {/* Patient Retention Flow Diagram */}
-          <div className="mt-12 sm:mt-16 md:mt-20 max-w-2xl mx-auto">
-            <img 
-              src="/patient retention.png" 
-              alt="Patient retention flow: Clinic Program to Retention Health Layer to Stabilized Patient Behavior to Improved Cohort Retention"
-              className="w-full h-auto"
-            />
-          </div>
-        </div>
-      </section>
-
-      <div className="h-px bg-gray-200"></div>
-
-      {/* PRODUCT DEFINITION */}
-      <section id="solution" className="py-12 sm:py-16 md:py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl sm:text-4xl md:text-[36px] font-bold text-slate-900 mb-8 sm:mb-10 text-center tracking-tight">
-            What Retention Health Actually Is
-          </h2>
-          <p className="text-xl sm:text-2xl text-gray-900 mb-12 sm:mb-16 text-center font-semibold max-w-3xl mx-auto leading-relaxed">
-            A white-label behavioral stabilization layer that sits inside your GLP-1 program.
-          </p>
-          
-          {/* Product Flow Diagram */}
-          <div className="bg-gradient-to-r from-blue-50 to-teal-50 p-6 sm:p-8 md:p-12 rounded-2xl border-2 border-blue-200 mb-12 sm:mb-16 md:mb-20">
-            <div className="grid md:grid-cols-3 gap-8 items-center max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="bg-white p-6 rounded-xl shadow-md mb-4">
-                  <p className="font-semibold text-gray-900 text-lg">Your Clinic Program</p>
-                </div>
-                <p className="text-sm text-gray-600">Prescribing & clinical care</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-4xl text-blue-600 mb-2">→</div>
-                <div className="bg-blue-600 text-white p-6 rounded-xl shadow-lg mb-4">
-                  <p className="font-bold text-lg">RetentionHealth Layer</p>
-                </div>
-                <p className="text-sm text-gray-600">Behavioral stabilization</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-4xl text-blue-600 mb-2">→</div>
-                <div className="bg-white p-6 rounded-xl shadow-md mb-4">
-                  <p className="font-semibold text-gray-900 text-lg">Stabilized Behavior</p>
-                </div>
-                <p className="text-sm text-gray-600">Reduced early churn</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 sm:gap-12 mb-12 sm:mb-16">
-            <div className="bg-gray-50 p-6 sm:p-8 md:p-10 rounded-2xl border-2 border-gray-200">
-              <h3 className="text-2xl font-bold text-slate-800 mb-8">It does not:</h3>
-              <ul className="space-y-5 text-gray-700 text-lg">
-                <li className="flex items-start gap-4">
-                  <XCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
-                  <span>Replace prescribing</span>
-                </li>
-                <li className="flex items-start gap-4">
-                  <XCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
-                  <span>Replace your EMR</span>
-                </li>
-                <li className="flex items-start gap-4">
-                  <XCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
-                  <span>Require coaching staff</span>
-                </li>
-              </ul>
-            </div>
             
-            <div className="bg-gradient-to-br from-blue-50 to-teal-50 p-6 sm:p-8 md:p-10 rounded-2xl border-2 border-blue-200">
-              <h3 className="text-2xl font-bold text-slate-800 mb-8">It provides:</h3>
-              <ul className="space-y-5 text-gray-700 text-lg">
-                <li className="flex items-start gap-4">
-                  <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-                  <span>Injection-cycle–aware nutrition structure</span>
-                </li>
-                <li className="flex items-start gap-4">
-                  <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-                  <span>Symptom-adaptive recommendations</span>
-                </li>
-                <li className="flex items-start gap-4">
-                  <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-                  <span>First 30-day stabilization</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="text-center">
-            <a 
-              href="mailto:contact@retentionhealth.com?subject=Product Discussion"
-              className="inline-block bg-blue-600 text-white px-10 py-4 rounded-lg font-semibold hover:bg-blue-700 text-lg shadow-md"
-            >
-              Discuss Your Program
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <div className="h-px bg-gray-200"></div>
-
-      {/* OPERATIONAL VISIBILITY */}
-      <section className="py-16 sm:py-24 md:py-32" style={{ backgroundColor: '#F7F9FB' }}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl sm:text-4xl md:text-[36px] font-bold text-slate-900 mb-8 text-center tracking-tight">
-            Operational Visibility
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-700 mb-12 sm:mb-16 md:mb-20 text-center max-w-2xl mx-auto">
-            Retention Health provides real-time insight into early cohort stabilization and retention indicators.
-          </p>
-          
-          {/* Dashboard Image */}
-          <div className="mb-12 sm:mb-16 md:mb-20 max-w-5xl mx-auto">
-            <img 
-              src="/mock dash.png" 
-              alt="RetentionHealth dashboard showing active GLP-1 patients, month-1 drop-off rate, ARR protected, retention trend, and patient stabilization grid"
-              className="w-full h-auto rounded-xl shadow-lg"
-            />
-          </div>
-          
-          {/* Key Features */}
-          <div className="grid md:grid-cols-3 gap-12 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="font-bold text-slate-800 text-xl">Cohort retention trend monitoring</h3>
-            </div>
+            <p className="text-lg text-gray-700 mb-6">During pilot:</p>
             
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="font-bold text-slate-800 text-xl">Active GLP-1 census tracking</h3>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <AlertTriangle className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="font-bold text-slate-800 text-xl">Early churn risk visibility</h3>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="h-px bg-gray-200"></div>
-
-      {/* FEATURES GRID */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl sm:text-4xl md:text-[36px] font-bold text-slate-900 mb-8 text-center tracking-tight">
-            How It Integrates
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-600 mb-12 sm:mb-16 md:mb-20 text-center max-w-3xl mx-auto">
-            Outcome-focused infrastructure that reduces operational load and stabilizes patient behavior.
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 md:mb-20">
-            {/* Patient-Facing Features */}
-            <div className="bg-white p-8 rounded-2xl border-2 border-blue-200 shadow-md">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Target className="w-7 h-7 text-blue-600" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-800 text-xl mb-2">Injection-Cycle Guidance</h3>
-                  <p className="text-gray-600 mb-3">Timing-aware nutrition recommendations</p>
-                  <p className="text-sm text-blue-600 font-semibold">→ Optimized support timing reduces confusion</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white p-8 rounded-2xl border-2 border-blue-200 shadow-md">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <TrendingUp className="w-7 h-7 text-blue-600" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-800 text-xl mb-2">Symptom Feedback</h3>
-                  <p className="text-gray-600 mb-3">Adaptive responses to patient input</p>
-                  <p className="text-sm text-blue-600 font-semibold">→ Personalized guidance during volatility</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white p-8 rounded-2xl border-2 border-blue-200 shadow-md">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Utensils className="w-7 h-7 text-blue-600" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-800 text-xl mb-2">Protein Prioritization</h3>
-                  <p className="text-gray-600 mb-3">Structured intake during suppression</p>
-                  <p className="text-sm text-blue-600 font-semibold">→ Reduces nausea-related drop-off</p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Clinic-Facing Features */}
-            <div className="bg-white p-8 rounded-2xl border-2 border-teal-200 shadow-md">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Users className="w-7 h-7 text-teal-600" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-800 text-xl mb-2">Active Seat Tracking</h3>
-                  <p className="text-gray-600 mb-3">Real-time patient engagement metrics</p>
-                  <p className="text-sm text-teal-600 font-semibold">→ Visibility into program utilization</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white p-8 rounded-2xl border-2 border-teal-200 shadow-md">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Zap className="w-7 h-7 text-teal-600" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-800 text-xl mb-2">Retention Indicators</h3>
-                  <p className="text-gray-600 mb-3">Early churn risk visibility</p>
-                  <p className="text-sm text-teal-600 font-semibold">→ Early alerts enable intervention</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white p-8 rounded-2xl border-2 border-teal-200 shadow-md">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <DollarSign className="w-7 h-7 text-teal-600" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-slate-800 text-xl mb-2">Volume Billing</h3>
-                  <p className="text-gray-600 mb-3">Seat-based pricing structure</p>
-                  <p className="text-sm text-teal-600 font-semibold">→ Scales with your patient volume</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-white p-6 sm:p-8 md:p-10 rounded-xl border-2 border-blue-200 max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-slate-800 mb-10 text-center">Deployment</h3>
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-blue-600" />
-                <span className="text-gray-700">300+ active patients</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-blue-600" />
-                <span className="text-gray-700">Subdomain deployment</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-blue-600" />
-                <span className="text-gray-700">Custom branding</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-blue-600" />
-                <span className="text-gray-700">No EMR required (MVP)</span>
-              </div>
-            </div>
-            <div className="text-center pt-6 border-t border-gray-200">
-              <p className="text-gray-700 font-semibold text-lg mb-2">Minimal operational lift.</p>
-              <p className="text-gray-900 font-bold text-xl">Live within days, not months.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-blue-500"></div>
-
-      {/* PILOT CTA */}
-      <section id="pilot" className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-blue-600 to-teal-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-[36px] font-bold mb-8 tracking-tight">
-            60-Day Retention Pilot
-          </h2>
-          <p className="text-lg sm:text-xl mb-4 opacity-90">
-            Structured evaluation. Not a beta experiment.
-          </p>
-          <p className="text-xl sm:text-2xl mb-12 sm:mb-16 max-w-2xl mx-auto">
-            Evaluate retention stabilization without restructuring your program.
-          </p>
-          
-          <div className="bg-white text-gray-900 p-6 sm:p-8 md:p-10 rounded-xl mb-8 sm:mb-12 text-left max-w-2xl mx-auto shadow-2xl">
-            <p className="font-bold text-slate-900 mb-8 text-2xl">Pilot includes:</p>
-            <ul className="space-y-4 text-gray-700 text-lg mb-8">
+            <ul className="space-y-3 mb-8">
               <li className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                <span>White-label configuration</span>
+                <CheckCircle className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
+                <span className="text-gray-800 text-lg">No patient names are collected</span>
               </li>
               <li className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                <span>Baseline retention modeling</span>
+                <CheckCircle className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
+                <span className="text-gray-800 text-lg">No EMR integration occurs</span>
               </li>
               <li className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                <span>Active seat reporting</span>
+                <CheckCircle className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
+                <span className="text-gray-800 text-lg">No medical records are accessed</span>
               </li>
               <li className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                <span>Founder-led onboarding</span>
+                <CheckCircle className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
+                <span className="text-gray-800 text-lg">Because the pilot does not collect Protected Health Information (PHI), a Business Associate Agreement (BAA) is not required during pilot participation</span>
               </li>
             </ul>
-            <p className="text-gray-600 pt-6 border-t border-gray-200">
-              Seat-based pricing structured around active patient volume.
+
+            <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6">
+              <p className="text-lg text-gray-800 font-semibold text-center">
+                Pilot design intentionally minimizes regulatory burden while validating measurable stabilization impact.
+              </p>
+            </div>
+
+            <p className="text-base text-gray-600 mt-8 text-center">
+              If the pilot validates measurable retention impact, the full production platform will operate within HIPAA-compliant infrastructure with secure clinic environments and executed BAAs.
             </p>
           </div>
+        </div>
+      </section>
+
+      <div className="h-px bg-gray-200"></div>
+
+      {/* FOUNDER STRUCTURE */}
+      <section id="founder-terms" className="py-20 bg-white px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-bold text-slate-900 mb-6 text-center">
+            Founder Revenue Share Model
+          </h2>
+          <p className="text-xl text-gray-600 mb-4 text-center">
+            Only for First 6 Clinics
+          </p>
           
-          <button
-            onClick={() => setIsModalOpen(true)}
-            className="inline-block bg-white text-blue-600 px-12 py-5 rounded-lg font-bold hover:bg-gray-100 text-xl shadow-2xl"
-          >
-            Request Pilot Discussion
-          </button>
+          <div className="bg-red-50 border-2 border-red-200 rounded-lg p-6 max-w-3xl mx-auto mb-8">
+            <p className="text-lg font-bold text-red-900 text-center">
+              Only 6 clinics will receive Founder pricing.
+            </p>
+            <p className="text-base text-red-800 text-center mt-2">
+              Founder pricing will not be reopened once filled.
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto bg-gradient-to-br from-blue-50 to-teal-50 p-10 rounded-2xl border-2 border-blue-200 shadow-lg mb-8">
+            <p className="text-lg text-gray-700 mb-8">
+              If measurable stabilization is demonstrated at Week 8, participating clinics may convert to permanent integration under Founder terms.
+            </p>
+
+            <p className="text-lg text-gray-700 mb-8">
+              Founder participants receive:
+            </p>
+
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
+                <span className="text-gray-800 text-lg">Lifetime preferred pricing</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
+                <span className="text-gray-800 text-lg">Priority onboarding</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
+                <span className="text-gray-800 text-lg">Case study participation opportunity</span>
+              </li>
+            </ul>
+
+            <p className="text-sm text-gray-600 italic">
+              Direct physician oversight remains fully preserved.
+            </p>
+          </div>
+
+          <div className="bg-gray-100 border border-gray-300 rounded-lg p-6 max-w-3xl mx-auto">
+            <p className="text-gray-700 text-center font-semibold">
+              Pilot cohort closes once 6 clinics are approved.
+            </p>
+          </div>
         </div>
       </section>
 
-      <div className="h-1 bg-gradient-to-r from-teal-500 via-blue-500 to-teal-500"></div>
+      <div className="h-px bg-gray-200"></div>
 
-      {/* FOOTER CREDIBILITY */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-lg text-gray-700 mb-4">
-            Retention Health builds retention infrastructure for subscription-based healthcare programs.
-          </p>
-          <p className="text-gray-700 mb-6">
-            Focused on operational churn reduction — not consumer diet applications.
-          </p>
-          <a 
-            href="https://www.linkedin.com/in/vic-sicard-6aa30725b/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-700 font-semibold text-lg"
-          >
-            LinkedIn →
-          </a>
+      {/* IDEAL PROFILE */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-bold text-slate-900 mb-16 text-center">
+            Ideal Clinic Profile
+          </h2>
+
+          <div className="max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 mb-8">This pilot is best suited for:</p>
+            
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-start gap-3">
+                <Users className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
+                <span className="text-gray-800 text-lg">50+ active GLP-1 patients</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Target className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
+                <span className="text-gray-800 text-lg">Owner-led clinics</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
+                <span className="text-gray-800 text-lg">Direct physician oversight</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
+                <span className="text-gray-800 text-lg">Willingness to submit weekly metrics</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
+                <span className="text-gray-800 text-lg">Desire to reduce early churn</span>
+              </li>
+            </ul>
+
+            <div className="bg-gray-100 border border-gray-300 rounded-lg p-6">
+              <p className="text-gray-700 font-semibold">
+                Not designed for national franchise groups.
+              </p>
+            </div>
+
+            <div className="mt-8 p-6 bg-blue-50 border-2 border-blue-200 rounded-lg">
+              <p className="text-lg font-semibold text-blue-900 mb-3">Preview the Interface Before Applying</p>
+              <p className="text-gray-700 mb-4">
+                Explore the clinic dashboard and patient experience with demo credentials:
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="/clinic"
+                  className="flex-1 bg-white border-2 border-blue-300 text-blue-700 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 text-center"
+                >
+                  Preview Clinic Dashboard
+                </a>
+                <a
+                  href="/patient"
+                  className="flex-1 bg-white border-2 border-blue-300 text-blue-700 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 text-center"
+                >
+                  Preview Patient Portal
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
+      <div className="h-px bg-gray-200"></div>
+
+      {/* PLATFORM DEVELOPMENT */}
+      <section className="py-16 bg-gradient-to-b from-gray-50 to-white px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
+            Platform Development
+          </h2>
+          <p className="text-lg text-gray-700 mb-4 text-center">
+            RetentionHealth is engineered and maintained by <strong>Dig Development</strong>, a software studio specializing in secure operational infrastructure and analytics platforms.
+          </p>
+          <p className="text-lg text-gray-700 text-center">
+            The system architecture maintains a clear separation between pilot validation and future HIPAA-compliant deployment.
+          </p>
+        </div>
+      </section>
+
+      <div className="h-px bg-gray-200"></div>
+
+      {/* APPLY FORM */}
+      <section id="apply" className="py-20 bg-white px-4 sm:px-6">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-slate-900 mb-6 text-center">
+            Apply for the Pilot Cohort
+          </h2>
+
+          <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 mb-8">
+            <p className="text-lg font-bold text-blue-900 mb-2 text-center">
+              Pilot Cohort
+            </p>
+            <p className="text-gray-700 text-center">
+              Limited to 6 Clinics for Initial Validation
+            </p>
+          </div>
+
+          <p className="text-gray-700 mb-8 text-center text-lg">
+            Check your clinic&apos;s eligibility for the 8-week stabilization pilot.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 text-lg shadow-md"
+            >
+              Apply for Pilot Cohort
+            </button>
+          </div>
+
+          <p className="text-sm text-gray-500 text-center">
+            Takes about 20 seconds • Applications reviewed within 48 hours
+          </p>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 }
